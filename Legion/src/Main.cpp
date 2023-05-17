@@ -37,11 +37,11 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	SetConsoleTitleA("Legion+ | Console");
 #endif
 
-	// should we create a log file for this session?
+	// 我们应该为此会话创建一个日志文件吗？
 	if (!cmdline.HasParam(L"--nologfile"))
 		g_Logger.InitializeLogFile();
 
-	// set process priority level
+	// 设置进程优先级
 	{
 		wstring sFmt = ((wstring)cmdline.GetParamValue(L"--prioritylvl")).ToLower();
 
@@ -337,7 +337,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 				}
 				else if (!filePath.EndsWith(".rpak" || ".mbnk")) {
 
-					g_Logger.Info("You loaded a file extension that isn't supported, the --export flag only supports .rpak and .mbnk file extensions");
+					g_Logger.Info("您加载了不受支持的文件扩展名，--export 标志仅支持 .rpak 和 .mbnk 文件扩展名");
 
 				}
 			}
@@ -357,7 +357,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 					ExportManager::ExportAssetList(AssetList, filename, filePath);
 				}
 				else if (!filePath.EndsWith(".rpak" || ".mbnk")) {
-					g_Logger.Info("You loaded a file extension that isn't supported, the --list flag only supports .rpak and .mbnk file extensions");
+					g_Logger.Info("您加载了不受支持的文件扩展名，--list 标志仅支持 .rpak 和 .mbnk 文件扩展名");
 				}
 			}
 

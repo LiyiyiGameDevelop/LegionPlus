@@ -84,7 +84,7 @@ void LegionMain::InitializeComponent()
 	this->ExportAllButton->SetSize({ 78, 27 });
 	this->ExportAllButton->SetLocation({ 206, 446});
 	this->ExportAllButton->SetTabIndex(4);
-	this->ExportAllButton->SetText("Export All");
+	this->ExportAllButton->SetText("全部导出");
 	this->ExportAllButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
 	this->ExportAllButton->Click += &OnExpAllClick;
 	this->AddControl(this->ExportAllButton);
@@ -93,7 +93,7 @@ void LegionMain::InitializeComponent()
 	this->ExportSelectedButton->SetSize({ 97, 27 });
 	this->ExportSelectedButton->SetLocation({ 103, 446});
 	this->ExportSelectedButton->SetTabIndex(3);
-	this->ExportSelectedButton->SetText("Export Selected");
+	this->ExportSelectedButton->SetText("导出所选内容");
 	this->ExportSelectedButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
 	this->ExportSelectedButton->Click += &OnExpClick;
 	this->AddControl(this->ExportSelectedButton);
@@ -102,7 +102,7 @@ void LegionMain::InitializeComponent()
 	this->LoadRPakButton->SetSize({ 85, 27 });
 	this->LoadRPakButton->SetLocation({ 12, 446});
 	this->LoadRPakButton->SetTabIndex(2);
-	this->LoadRPakButton->SetText("Load File");
+	this->LoadRPakButton->SetText("加载文件");
 	this->LoadRPakButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
 	this->LoadRPakButton->Click += &OnLoadClick;
 	this->AddControl(this->LoadRPakButton);
@@ -313,7 +313,7 @@ void LegionMain::ExportAllAssets()
 
 	if (this->DisplayIndices.Count() == 0)
 	{
-		Forms::MessageBox::Show("Please find some assets to export.", "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Information);
+		Forms::MessageBox::Show("请找到一些要导出的资产。", "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Information);
 		return;
 	}
 

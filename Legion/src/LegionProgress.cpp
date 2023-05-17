@@ -16,7 +16,7 @@ void LegionProgress::UpdateProgress(uint32_t Progress, bool Finished)
 		this->FinishButton->SetEnabled(true);
 		this->CancelButton->SetEnabled(false);
 		this->CanClose = true;
-		this->SetText("Legion+ | Export Complete");
+		this->SetText("Legion+ | 导出完成");
 
 		if (this->Canceled || this->AutoClose)
 			this->Close();
@@ -38,7 +38,7 @@ void LegionProgress::InitializeComponent()
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
 	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
-	this->SetText("Legion+ | Exporting Assets...");
+	this->SetText("Legion+ | 正在导出资产...");
 	this->SetClientSize({ 409, 119 });
 	this->SetFormBorderStyle(Forms::FormBorderStyle::FixedSingle);
 	this->SetStartPosition(Forms::FormStartPosition::CenterParent);
@@ -50,7 +50,7 @@ void LegionProgress::InitializeComponent()
 	this->ExportLabel->SetSize({ 385, 17 });
 	this->ExportLabel->SetLocation({ 12, 18 });
 	this->ExportLabel->SetTabIndex(3);
-	this->ExportLabel->SetText("Progress:");
+	this->ExportLabel->SetText("进展：");
 	this->ExportLabel->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left | Forms::AnchorStyles::Right);
 	this->ExportLabel->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->AddControl(this->ExportLabel);
@@ -59,7 +59,7 @@ void LegionProgress::InitializeComponent()
 	this->CancelButton->SetSize({ 87, 31 });
 	this->CancelButton->SetLocation({ 310, 76 });
 	this->CancelButton->SetTabIndex(2);
-	this->CancelButton->SetText("Cancel");
+	this->CancelButton->SetText("取消");
 	this->CancelButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Right);
 	this->CancelButton->Click += &OnCancelClick;
 	this->AddControl(this->CancelButton);
@@ -102,6 +102,6 @@ void LegionProgress::OnCancelClick(Forms::Control* Sender)
 void LegionProgress::CancelProgress()
 {
 	this->CancelButton->SetEnabled(false);
-	this->CancelButton->SetText("Canceling...");
+	this->CancelButton->SetText("取消...");
 	this->Canceled = true;
 }
