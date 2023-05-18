@@ -150,7 +150,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 	this->LoadPath = File;
 
 	this->LoadRPakButton->SetEnabled(false);
-	this->StatusLabel->SetText("Processing file...");
+	this->StatusLabel->SetText("正在处理文件...");
 
 	Threading::Thread Th([](void* Data)
 	{
@@ -174,14 +174,14 @@ void LegionMain::LoadApexFile(const List<string>& File)
 			{
 				Main->Invoke([]()
 				{
-					窗体::MessageBox::Show("An error occured while loading the RPak.", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
+					窗体::MessageBox::Show("加载 RPak 时出错。", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 				});
-				Main->StatusLabel->SetText("Idle");
+				Main->StatusLabel->SetText("空闲");
 			}
 		}
 		else if (Main->LoadPath[0].EndsWith(".bsp"))
 		{
-			Main->StatusLabel->SetText("Loading bsp...");
+			Main->StatusLabel->SetText("正在加载 bsp...");
 
 			try
 			{
@@ -197,7 +197,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 
 				if ((ModelExportFormat_t)ExportManager::Config.Get<System::SettingType::Integer>("ModelFormat") != ModelExportFormat_t::Cast)
 				{
-					auto msgAnswer = MessageBox::Show("You are about to export a bsp file with a different model format selected than 'Cast'. Continue?", "Legion+", 窗体::MessageBoxButtons::YesNo, 窗体::MessageBoxIcon::Question);
+					auto msgAnswer = MessageBox::Show("您将要导出一个 bsp 文件，其选择的模型格式与“Cast”不同。继续吗？", "Legion+", 窗体::MessageBoxButtons::YesNo, 窗体::MessageBoxIcon::Question);
 					if (msgAnswer == DialogResult::No)
 					{
 						Main->StatusLabel->SetText("Idle");
