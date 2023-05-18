@@ -39,7 +39,7 @@ void LegionMain::InitializeComponent()
 	this->RefreshAssetsButton->SetSize({ 78, 27 });
 	this->RefreshAssetsButton->SetLocation({ 374, 446 });
 	this->RefreshAssetsButton->SetTabIndex(9);
-	this->RefreshAssetsButton->SetText("Refresh");
+	this->RefreshAssetsButton->SetText("刷新");
 	this->RefreshAssetsButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->RefreshAssetsButton->Click += &OnRefreshClick;
 	this->AddControl(this->RefreshAssetsButton);
@@ -48,7 +48,7 @@ void LegionMain::InitializeComponent()
 	this->ClearSearchButton->SetSize({ 85, 24 });
 	this->ClearSearchButton->SetLocation({ 381, 8 });
 	this->ClearSearchButton->SetTabIndex(8);
-	this->ClearSearchButton->SetText("Clear");
+	this->ClearSearchButton->SetText("清晰");
 	this->ClearSearchButton->SetVisible(false);
 	this->ClearSearchButton->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->ClearSearchButton->Click += &OnClearClick;
@@ -58,7 +58,7 @@ void LegionMain::InitializeComponent()
 	this->StatusLabel->SetSize({ 255, 24 });
 	this->StatusLabel->SetLocation({ 577, 8 });
 	this->StatusLabel->SetTabIndex(7);
-	this->StatusLabel->SetText("Idle");
+	this->StatusLabel->SetText("空闲");
 	this->StatusLabel->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Right);
 	this->StatusLabel->SetTextAlign(Drawing::ContentAlignment::MiddleRight);
 	this->AddControl(this->StatusLabel);
@@ -67,7 +67,7 @@ void LegionMain::InitializeComponent()
 	this->SearchButton->SetSize({ 85, 24 });
 	this->SearchButton->SetLocation({ 290, 8 });
 	this->SearchButton->SetTabIndex(6);
-	this->SearchButton->SetText("Search");
+	this->SearchButton->SetText("搜索");
 	this->SearchButton->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->SearchButton->Click += &OnSearchClick;
 	this->AddControl(this->SearchButton);
@@ -124,9 +124,9 @@ void LegionMain::InitializeComponent()
 	this->AssetsListView->SetView(窗体::View::Details);
 	this->AssetsListView->Columns.Add({ "Name", 250 });
 	this->AssetsListView->Columns.Add({ "Type", 100 });
-	this->AssetsListView->Columns.Add({ "Status", 100 });
+	this->AssetsListView->Columns.Add({ "状态", 100 });
 	this->AssetsListView->Columns.Add({ "Info", 220 });
-	this->AssetsListView->Columns.Add({ "Debug Info", 130 });
+	this->AssetsListView->Columns.Add({ "调试信息", 130 });
 	this->AssetsListView->SetVirtualMode(true);
 	this->AssetsListView->SetFullRowSelect(true);
 	this->AssetsListView->VirtualItemsSelectionRangeChanged += &OnSelectedIndicesChanged;
