@@ -86,7 +86,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 			filePath = wstring(cmdline.GetParamValue(L"--list")).ToString();
 		}
 
-		// handle cli stuff
+		// 处理 CLI 内容
 		if (!string::IsNullOrEmpty(filePath))
 		{
 			auto Rpak = std::make_unique<RpakLib>();
@@ -95,14 +95,14 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 			Rpak->LoadRpak(filePath);
 			Rpak->PatchAssets();
 
-			// other rpak flags
+			// 其他 RPAK 标志
 			ExportManager::Config.SetBool("UseFullPaths", cmdline.HasParam(L"--fullpath"));
 			ExportManager::Config.SetBool("AudioLanguageFolders", cmdline.HasParam(L"--audiolanguagefolder"));
 			ExportManager::Config.SetBool("OverwriteExistingFiles", cmdline.HasParam(L"--overwrite"));
 			ExportManager::Config.SetBool("UseTxtrGuids", cmdline.HasParam(L"--usetxtrguids"));
 			ExportManager::Config.SetBool("SkinExport", cmdline.HasParam(L"--skinexport"));
 
-			// asset rpak formats flags
+			// 资产 RPAK 格式标志
 			if (cmdline.HasParam(L"--mdlfmt"))
 			{
 				ModelExportFormat_t MdlFmt = (ModelExportFormat_t)ExportManager::Config.Get<System::SettingType::Integer>("ModelFormat");
@@ -259,7 +259,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
 			std::unique_ptr<List<ApexAsset>> AssetList;
 
-			// load rpak flags
+			// 加载 RPAK 标志
 			bool bLoadModels = cmdline.HasParam(L"--loadmodels");
 			bool bLoadAnims = cmdline.HasParam(L"--loadanimations");
 			bool BLoadAnimSeqs = cmdline.HasParam(L"--loadanimationseqs");
@@ -304,7 +304,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 					bLoadShaderSets,
 					bLoadSettingsSets,
 					bLoadRSONs,
-					false // not ready yet.
+					false // 还没准备好。
 				};
 
 				AssetList = Rpak->BuildAssetList(bAssets);
@@ -372,14 +372,14 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		if (cmdline.ArgC() >= 1) {
 			wstring firstParam = cmdline.GetParamAtIdx(0);
 
-			// check that the first param is actually a file that exists
-			// i'm sure this is bad in some way but once i push it, it's not my problem anymore
+			// 检查第一个参数是否确实是一个存在的文件，
+			// 我确信这在某种程度上很糟糕，但是一旦我推送它，就不再是我的问题了
 			if (IO::File::Exists(firstParam.ToString()))
 				sFileToLoad = firstParam;
 		}
 		else {
 #ifndef _DEBUG
-			// splash screen only exists on release because yes
+			// 初始屏幕仅在发布时存在，因为是
 			Forms::Application::Run(new LegionSplash());
 #endif
 		}
