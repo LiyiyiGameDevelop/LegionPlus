@@ -35,7 +35,7 @@ namespace Themes
 		CheckBoxImage = Drawing::ImageFromTgaData(CheckBoxImage_Src, sizeof(CheckBoxImage_Src));
 
 		// Change the message box colors to represent our theme
-		Forms::MessageBox::SetMessageBoxColors(Drawing::Color::White, Drawing::Color(30, 30, 30), Drawing::Color(50, 50, 50));
+		窗体::MessageBox::SetMessageBoxColors(Drawing::Color::White, Drawing::Color(30, 30, 30), Drawing::Color(50, 50, 50));
 	}
 
 	WraithTheme::~WraithTheme()
@@ -43,7 +43,7 @@ namespace Themes
 		delete CheckBoxImage;
 	}
 
-	void WraithTheme::RenderControlBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -51,7 +51,7 @@ namespace Themes
 		// Override for textbox rendering due to a bug in the layout rect
 		//
 
-		if (Ctrl->GetType() == Forms::ControlTypes::TextBox)
+		if (Ctrl->GetType() == 窗体::ControlTypes::TextBox)
 		{
 			Rect.Width = Ctrl->Size().Width;
 			Rect.Height = Ctrl->Size().Height;
@@ -67,7 +67,7 @@ namespace Themes
 		EventArgs->Graphics->DrawRectangle(&Pen, Rect);
 	}
 
-	void WraithTheme::RenderControlBackground(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlBackground(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -76,7 +76,7 @@ namespace Themes
 		EventArgs->Graphics->FillRectangle(&brush, Rect);
 	}
 
-	void WraithTheme::RenderControlButtonBackground(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlButtonBackground(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -101,7 +101,7 @@ namespace Themes
 		EventArgs->Graphics->FillRectangle(DrawBrush.get(), Rect);
 	}
 
-	void WraithTheme::RenderControlText(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State, Drawing::Rectangle LayoutRect, Drawing::ContentAlignment Alignment) const
+	void WraithTheme::RenderControlText(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State, Drawing::Rectangle LayoutRect, Drawing::ContentAlignment Alignment) const
 	{
 		// Fetch color from foreground
 		Drawing::SolidBrush TextBrush((State == UIX::UIXRenderState::Disabled) ? TextDisabledBrush : TextEnabledBrush);
@@ -136,7 +136,7 @@ namespace Themes
 		EventArgs->Graphics->DrawString((wchar_t*)Text, Text.Length(), Font.get(), TextLayoutRect, &StrFmt, &TextBrush);
 	}
 
-	void WraithTheme::RenderControlProgressFill(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State, uint32_t Progress) const
+	void WraithTheme::RenderControlProgressFill(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State, uint32_t Progress) const
 	{
 		// Bring client rect to stack
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
@@ -148,7 +148,7 @@ namespace Themes
 		EventArgs->Graphics->FillRectangle(&FillBrush, Gdiplus::RectF(2, 2, (Rect.Width - 4.f) * (Progress / 100.0f), Rect.Height - 4.f));
 	}
 
-	void WraithTheme::RenderControlGlyph(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlGlyph(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		// Bring client rect to stack
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
@@ -181,7 +181,7 @@ namespace Themes
 		EventArgs->Graphics->FillPath(&FillBrush, &Path);
 	}
 
-	void WraithTheme::RenderControlCheckBoxBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlCheckBoxBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 		
@@ -218,7 +218,7 @@ namespace Themes
 		EventArgs->Graphics->DrawRectangle(&Pen, BoxRect);
 	}
 
-	void WraithTheme::RenderControlCheckBoxCheck(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlCheckBoxCheck(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 		Drawing::Rectangle CheckRect(((Rect.Height - 12) / 2) + 1, (Rect.Height - 12) / 2, 12, 12);
@@ -228,7 +228,7 @@ namespace Themes
 			EventArgs->Graphics->DrawImage(CheckBoxImage, CheckRect);
 	}
 
-	void WraithTheme::RenderControlRadioBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlRadioBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -249,7 +249,7 @@ namespace Themes
 		EventArgs->Graphics->SetSmoothingMode(SmMode);
 	}
 
-	void WraithTheme::RenderControlRadioCheck(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlRadioCheck(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 		Drawing::Rectangle FillRect(1, 1, Rect.Height - 3, Rect.Height - 3);
@@ -285,7 +285,7 @@ namespace Themes
 		EventArgs->Graphics->SetSmoothingMode(SmMode);
 	}
 
-	void WraithTheme::RenderControlGroupBox(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void WraithTheme::RenderControlGroupBox(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -326,7 +326,7 @@ namespace Themes
 		EventArgs->Graphics->DrawLines(&pen, &Lines[0], _countof(Lines));
 	}
 
-	void WraithTheme::RenderControlListColumnHeader(const std::unique_ptr<Forms::DrawListViewColumnHeaderEventArgs>& EventArgs, Forms::Control* Ctrl) const
+	void WraithTheme::RenderControlListColumnHeader(const std::unique_ptr<窗体::DrawListViewColumnHeaderEventArgs>& EventArgs, 窗体::Control* Ctrl) const
 	{
 		// Fetch color from foreground
 		Drawing::SolidBrush TextBrush(TextEnabledBrush);
@@ -388,7 +388,7 @@ namespace Themes
 		EventArgs->Graphics->SetSmoothingMode(SmMode);
 	}
 
-	void WraithTheme::RenderControlListItem(const std::unique_ptr<Forms::DrawListViewItemEventArgs>& EventArgs, Forms::Control* Ctrl, Drawing::Rectangle SubItemBounds) const
+	void WraithTheme::RenderControlListItem(const std::unique_ptr<窗体::DrawListViewItemEventArgs>& EventArgs, 窗体::Control* Ctrl, Drawing::Rectangle SubItemBounds) const
 	{
 		// Fetch the state because we are owner draw
 		auto State = SendMessageA(Ctrl->GetHandle(), LVM_GETITEMSTATE, (WPARAM)EventArgs->ItemIndex, (LPARAM)LVIS_SELECTED);
@@ -421,7 +421,7 @@ namespace Themes
 		EventArgs->Graphics->DrawString((wchar_t*)Text, Text.Length(), Font.get(), TextLayoutRect, &StrFmt, &TextBrush);		
 	}
 
-	void WraithTheme::RenderControlListSubItem(const std::unique_ptr<Forms::DrawListViewSubItemEventArgs>& EventArgs, Forms::Control* Ctrl) const
+	void WraithTheme::RenderControlListSubItem(const std::unique_ptr<窗体::DrawListViewSubItemEventArgs>& EventArgs, 窗体::Control* Ctrl) const
 	{
 		// Use stock bounds, subitems are valid
 		Drawing::Rectangle SubItemBounds(EventArgs->Bounds);

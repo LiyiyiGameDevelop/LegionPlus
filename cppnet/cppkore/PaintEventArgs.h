@@ -3,7 +3,7 @@
 #include <memory>
 #include "DrawingBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the OnPaint event.
 	class PaintEventArgs

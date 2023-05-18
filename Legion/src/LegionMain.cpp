@@ -10,7 +10,7 @@
 #include <version.h>
 
 LegionMain::LegionMain()
-	: Forms::Form(), IsInExportMode(false)
+	: 窗体::Form(), IsInExportMode(false)
 {
 	g_pLegionMain = this;
 	this->InitializeComponent();
@@ -20,18 +20,18 @@ void LegionMain::InitializeComponent()
 {
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
-	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
+	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
 	this->SetText("Legion+ " UI_VER_STR);
 	this->SetClientSize({ 844, 481 });
 	this->SetMinimumSize({ 791, 520 });
-	this->SetStartPosition(Forms::FormStartPosition::CenterScreen);
+	this->SetStartPosition(窗体::FormStartPosition::CenterScreen);
 
 	this->TitanfallConverterButton = new UIX::UIXButton();
 	this->TitanfallConverterButton->SetSize({ 78, 27 });
 	this->TitanfallConverterButton->SetLocation({ 290, 446 });
 	this->TitanfallConverterButton->SetTabIndex(9);
 	this->TitanfallConverterButton->SetText("Titanfall 2");
-	this->TitanfallConverterButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
+	this->TitanfallConverterButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->TitanfallConverterButton->Click += &OnTitanfallClick;
 	this->AddControl(this->TitanfallConverterButton);
 
@@ -40,7 +40,7 @@ void LegionMain::InitializeComponent()
 	this->RefreshAssetsButton->SetLocation({ 374, 446 });
 	this->RefreshAssetsButton->SetTabIndex(9);
 	this->RefreshAssetsButton->SetText("Refresh");
-	this->RefreshAssetsButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
+	this->RefreshAssetsButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->RefreshAssetsButton->Click += &OnRefreshClick;
 	this->AddControl(this->RefreshAssetsButton);
 
@@ -50,7 +50,7 @@ void LegionMain::InitializeComponent()
 	this->ClearSearchButton->SetTabIndex(8);
 	this->ClearSearchButton->SetText("Clear");
 	this->ClearSearchButton->SetVisible(false);
-	this->ClearSearchButton->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->ClearSearchButton->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->ClearSearchButton->Click += &OnClearClick;
 	this->AddControl(this->ClearSearchButton);
 
@@ -59,7 +59,7 @@ void LegionMain::InitializeComponent()
 	this->StatusLabel->SetLocation({ 577, 8 });
 	this->StatusLabel->SetTabIndex(7);
 	this->StatusLabel->SetText("Idle");
-	this->StatusLabel->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Right);
+	this->StatusLabel->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Right);
 	this->StatusLabel->SetTextAlign(Drawing::ContentAlignment::MiddleRight);
 	this->AddControl(this->StatusLabel);
 
@@ -68,7 +68,7 @@ void LegionMain::InitializeComponent()
 	this->SearchButton->SetLocation({ 290, 8 });
 	this->SearchButton->SetTabIndex(6);
 	this->SearchButton->SetText("Search");
-	this->SearchButton->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->SearchButton->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->SearchButton->Click += &OnSearchClick;
 	this->AddControl(this->SearchButton);
 
@@ -76,7 +76,7 @@ void LegionMain::InitializeComponent()
 	this->SearchBox->SetSize({ 272, 24 });
 	this->SearchBox->SetLocation({ 12, 8 });
 	this->SearchBox->SetTabIndex(5);
-	this->SearchBox->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->SearchBox->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->SearchBox->KeyPress += &OnSearchKeyPressed;
 	this->AddControl(this->SearchBox);
 
@@ -85,7 +85,7 @@ void LegionMain::InitializeComponent()
 	this->ExportAllButton->SetLocation({ 206, 446});
 	this->ExportAllButton->SetTabIndex(4);
 	this->ExportAllButton->SetText("全部导出");
-	this->ExportAllButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
+	this->ExportAllButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->ExportAllButton->Click += &OnExpAllClick;
 	this->AddControl(this->ExportAllButton);
 
@@ -94,7 +94,7 @@ void LegionMain::InitializeComponent()
 	this->ExportSelectedButton->SetLocation({ 103, 446});
 	this->ExportSelectedButton->SetTabIndex(3);
 	this->ExportSelectedButton->SetText("导出所选内容");
-	this->ExportSelectedButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
+	this->ExportSelectedButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->ExportSelectedButton->Click += &OnExpClick;
 	this->AddControl(this->ExportSelectedButton);
 
@@ -103,7 +103,7 @@ void LegionMain::InitializeComponent()
 	this->LoadRPakButton->SetLocation({ 12, 446});
 	this->LoadRPakButton->SetTabIndex(2);
 	this->LoadRPakButton->SetText("加载文件");
-	this->LoadRPakButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
+	this->LoadRPakButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->LoadRPakButton->Click += &OnLoadClick;
 	this->AddControl(this->LoadRPakButton);
 
@@ -113,15 +113,15 @@ void LegionMain::InitializeComponent()
 	this->SettingsButton->SetTabIndex(1);
 	this->SettingsButton->SetText("Settings");
 	this->SettingsButton->Click += &OnSettingsClick;
-	this->SettingsButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Right);
+	this->SettingsButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->AddControl(this->SettingsButton);
 
 	this->AssetsListView = new UIX::UIXListView();
 	this->AssetsListView->SetSize({ 820, 398 });
 	this->AssetsListView->SetLocation({ 12, 38 });
 	this->AssetsListView->SetTabIndex(0);
-	this->AssetsListView->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left | Forms::AnchorStyles::Right);
-	this->AssetsListView->SetView(Forms::View::Details);
+	this->AssetsListView->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left | 窗体::AnchorStyles::Right);
+	this->AssetsListView->SetView(窗体::View::Details);
 	this->AssetsListView->Columns.Add({ "Name", 250 });
 	this->AssetsListView->Columns.Add({ "Type", 100 });
 	this->AssetsListView->Columns.Add({ "Status", 100 });
@@ -174,7 +174,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 			{
 				Main->Invoke([]()
 				{
-					Forms::MessageBox::Show("An error occured while loading the RPak.", "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Warning);
+					窗体::MessageBox::Show("An error occured while loading the RPak.", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 				});
 				Main->StatusLabel->SetText("Idle");
 			}
@@ -197,7 +197,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 
 				if ((ModelExportFormat_t)ExportManager::Config.Get<System::SettingType::Integer>("ModelFormat") != ModelExportFormat_t::Cast)
 				{
-					auto msgAnswer = MessageBox::Show("You are about to export a bsp file with a different model format selected than 'Cast'. Continue?", "Legion+", Forms::MessageBoxButtons::YesNo, Forms::MessageBoxIcon::Question);
+					auto msgAnswer = MessageBox::Show("You are about to export a bsp file with a different model format selected than 'Cast'. Continue?", "Legion+", 窗体::MessageBoxButtons::YesNo, 窗体::MessageBoxIcon::Question);
 					if (msgAnswer == DialogResult::No)
 					{
 						Main->StatusLabel->SetText("Idle");
@@ -209,7 +209,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 
 				if ((ImageExportFormat_t)ExportManager::Config.Get<System::SettingType::Integer>("ImageFormat") != ImageExportFormat_t::Png)
 				{
-					auto msgAnswer = MessageBox::Show("You are about to export a bsp file with a different image format selected than 'PNG'. Continue?", "Legion+", Forms::MessageBoxButtons::YesNo, Forms::MessageBoxIcon::Question);
+					auto msgAnswer = MessageBox::Show("You are about to export a bsp file with a different image format selected than 'PNG'. Continue?", "Legion+", 窗体::MessageBoxButtons::YesNo, 窗体::MessageBoxIcon::Question);
 					if (msgAnswer == DialogResult::No)
 					{
 						Main->StatusLabel->SetText("Idle");
@@ -227,13 +227,13 @@ void LegionMain::LoadApexFile(const List<string>& File)
 
 				Main->Invoke([]()
 				{
-					Forms::MessageBox::Show("Successfully exported the bsp map file.", "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Information);
+					窗体::MessageBox::Show("Successfully exported the bsp map file.", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
 				});
 				Main->StatusLabel->SetText("Idle");
 			}
 			catch (const std::exception& e)
 			{
-				Forms::MessageBox::Show("An error occurred while exporting the bsp file:\n\n" + string(e.what()), "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Warning);
+				窗体::MessageBox::Show("An error occurred while exporting the bsp file:\n\n" + string(e.what()), "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 			}
 
 			Main->RefreshView();
@@ -254,7 +254,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 			}
 			catch (const std::exception& e)
 			{
-				Forms::MessageBox::Show("An error occurred while loading the MBNK:\n\n" + string(e.what()), "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Warning);
+				窗体::MessageBox::Show("An error occurred while loading the MBNK:\n\n" + string(e.what()), "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 				Main->StatusLabel->SetText("Idle");
 			}
 		}
@@ -274,7 +274,7 @@ void LegionMain::ExportSelectedAssets()
 
 	if (SelectedIndices.Count() == 0)
 	{
-		Forms::MessageBox::Show("Please select at least one asset to export.", "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Information);
+		窗体::MessageBox::Show("Please select at least one asset to export.", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
 		return;
 	}
 
@@ -313,7 +313,7 @@ void LegionMain::ExportAllAssets()
 
 	if (this->DisplayIndices.Count() == 0)
 	{
-		Forms::MessageBox::Show("请找到一些要导出的资产。", "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Information);
+		窗体::MessageBox::Show("请找到一些要导出的资产。", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
 		return;
 	}
 
@@ -606,7 +606,7 @@ void LegionMain::ResetDisplayIndices()
 		this->StatusLabel->SetText(string::Format("Loaded %d assets", this->DisplayIndices.Count()));
 }
 
-void LegionMain::OnLoadClick(Forms::Control* Sender)
+void LegionMain::OnLoadClick(窗体::Control* Sender)
 {
 	LegionMain* ThisPtr = (LegionMain*)Sender->FindForm();
 
@@ -623,55 +623,55 @@ void LegionMain::OnLoadClick(Forms::Control* Sender)
 	else if (OpenFileD.Count() > MAX_LOADED_FILES)
 	{
 		string msg = string::Format("Please select %i or fewer files.", MAX_LOADED_FILES);
-		MessageBox::Show(msg, "Legion+", Forms::MessageBoxButtons::OK, Forms::MessageBoxIcon::Warning);
+		MessageBox::Show(msg, "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 		return;
 	}
 
 	ThisPtr->LoadApexFile(OpenFileD);
 }
 
-void LegionMain::OnSettingsClick(Forms::Control* Sender)
+void LegionMain::OnSettingsClick(窗体::Control* Sender)
 {
 	auto Settings = std::make_unique<LegionSettings>();
-	Settings->ShowDialog((Forms::Form*)Sender->FindForm());
+	Settings->ShowDialog((窗体::Form*)Sender->FindForm());
 }
 
-void LegionMain::OnExpClick(Forms::Control* Sender)
+void LegionMain::OnExpClick(窗体::Control* Sender)
 {
 	((LegionMain*)Sender->FindForm())->ExportSelectedAssets();
 }
 
-void LegionMain::OnExpAllClick(Forms::Control* Sender)
+void LegionMain::OnExpAllClick(窗体::Control* Sender)
 {
 	((LegionMain*)Sender->FindForm())->ExportAllAssets();
 }
 
-void LegionMain::OnSearchClick(Forms::Control* Sender)
+void LegionMain::OnSearchClick(窗体::Control* Sender)
 {
 	((LegionMain*)Sender->FindForm())->SearchForAssets();
 }
 
-void LegionMain::OnClearClick(Forms::Control* Sender)
+void LegionMain::OnClearClick(窗体::Control* Sender)
 {
 	((LegionMain*)Sender->FindForm())->ResetDisplayIndices();
 }
 
-void LegionMain::OnTitanfallClick(Forms::Control* Sender)
+void LegionMain::OnTitanfallClick(窗体::Control* Sender)
 {
 	auto Titanfall = std::make_unique<LegionTitanfallConverter>();
-	Titanfall->ShowDialog((Forms::Form*)Sender->FindForm());
+	Titanfall->ShowDialog((窗体::Form*)Sender->FindForm());
 }
 
-void LegionMain::OnRefreshClick(Forms::Control* Sender)
+void LegionMain::OnRefreshClick(窗体::Control* Sender)
 {
 	LegionMain* ThisPtr = (LegionMain*)Sender->FindForm();
 
 	ThisPtr->RefreshView();
 }
 
-void LegionMain::OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionMain::OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventArgs, 窗体::Control* Sender)
 {
-	if (EventArgs->Button != Forms::MouseButtons::Right)
+	if (EventArgs->Button != 窗体::MouseButtons::Right)
 		return;
 
 	LegionMain* ThisPtr = ((LegionMain*)Sender->FindForm());
@@ -699,12 +699,12 @@ void LegionMain::OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventAr
 	g_Logger.Info("copying %i asset name%s to clipboard\n", SelectedIndices.Count(), SelectedIndices.Count() == 1 ? "" : "s");
 }
 
-void LegionMain::OnListDoubleClick(Forms::Control* Sender)
+void LegionMain::OnListDoubleClick(窗体::Control* Sender)
 {
 	((LegionMain*)Sender->FindForm())->ExportSingleAsset();
 }
 
-void LegionMain::OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionMain::OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	if (EventArgs->KeyCode() == Keys::E)
 	{
@@ -731,7 +731,7 @@ void LegionMain::OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, For
 		switch (Asset.Type) {
 		case ApexAssetType::DataTable:
 		{
-			if (Form->TablePreviewWindow == nullptr || Form->TablePreviewWindow->GetState(Forms::ControlStates::StateDisposed))
+			if (Form->TablePreviewWindow == nullptr || Form->TablePreviewWindow->GetState(窗体::ControlStates::StateDisposed))
 			{
 				Form->TablePreviewWindow = std::make_unique<LegionTablePreview>();
 				Form->TablePreviewWindow->Show();
@@ -744,7 +744,7 @@ void LegionMain::OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, For
 		}
 		default:
 		{
-			if (Form->PreviewWindow == nullptr || Form->PreviewWindow->GetState(Forms::ControlStates::StateDisposed))
+			if (Form->PreviewWindow == nullptr || Form->PreviewWindow->GetState(窗体::ControlStates::StateDisposed))
 			{
 				Form->PreviewWindow = std::make_unique<LegionPreview>();
 				Form->PreviewWindow->SetMaterialStreamer([Form](string source, uint64_t hash)
@@ -762,12 +762,12 @@ void LegionMain::OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, For
 	}
 }
 
-void LegionMain::OnListKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionMain::OnListKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	EventArgs->SetHandled(true);
 }
 
-void LegionMain::OnSearchKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionMain::OnSearchKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	if (EventArgs->KeyChar == '\r')
 	{
@@ -776,12 +776,12 @@ void LegionMain::OnSearchKeyPressed(const std::unique_ptr<KeyPressEventArgs>& Ev
 	}
 }
 
-void LegionMain::OnSelectedIndicesChanged(const std::unique_ptr<Forms::ListViewVirtualItemsSelectionRangeChangedEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionMain::OnSelectedIndicesChanged(const std::unique_ptr<窗体::ListViewVirtualItemsSelectionRangeChangedEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	((LegionMain*)Sender->FindForm())->DoPreviewSwap();
 }
 
-void LegionMain::GetVirtualItem(const std::unique_ptr<Forms::RetrieveVirtualItemEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionMain::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	LegionMain* ThisPtr = (LegionMain*)Sender->FindForm();
 
@@ -851,12 +851,12 @@ void LegionMain::GetVirtualItem(const std::unique_ptr<Forms::RetrieveVirtualItem
 	}
 }
 
-void LegionMain::ExportProgressCallback(uint32_t Progress, Forms::Form* MainForm, bool Finished)
+void LegionMain::ExportProgressCallback(uint32_t Progress, 窗体::Form* MainForm, bool Finished)
 {
 	((LegionMain*)MainForm)->ExportProgressChanged(Progress, Finished);
 }
 
-bool LegionMain::CheckStatusCallback(int32_t AssetIndex, Forms::Form* MainForm)
+bool LegionMain::CheckStatusCallback(int32_t AssetIndex, 窗体::Form* MainForm)
 {
 	return ((LegionMain*)MainForm)->CheckStatus(AssetIndex);
 }

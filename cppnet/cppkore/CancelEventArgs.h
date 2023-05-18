@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the cancel event.
 	class CancelEventArgs

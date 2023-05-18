@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "RadioButton.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	RadioButton::RadioButton()
 		: ButtonBase(), _AutoCheck(true), _Appearence(Appearence::Normal), _Checked(false)

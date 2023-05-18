@@ -2,7 +2,7 @@
 
 #include "GroupBox.h"
 
-using namespace Forms;
+using namespace ´°Ìו;
 
 namespace UIX
 {

@@ -4,7 +4,7 @@
 #include <cstdint>
 #include "ListBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// We can't create a circle dependency here, so we define an empty class for use later...
 	class Control;

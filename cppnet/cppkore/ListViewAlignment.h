@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <CommCtrl.h>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies how items align in the ListView
 	enum class ListViewAlignment

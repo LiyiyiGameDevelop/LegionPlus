@@ -6,7 +6,7 @@
 #include "BorderStyle.h"
 #include "ContentAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Encapsulates a standard Windows group box.
 	class GroupBox : public Control

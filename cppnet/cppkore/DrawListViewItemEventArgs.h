@@ -7,7 +7,7 @@
 #include "ListViewItem.h"
 #include "ListViewItemStates.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// This class contains the information a user needs to paint ListView items.
 	class DrawListViewItemEventArgs

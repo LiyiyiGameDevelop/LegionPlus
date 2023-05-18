@@ -2,7 +2,7 @@
 #include "LegionProgress.h"
 
 LegionProgress::LegionProgress()
-	: Forms::Form(), CanClose(false), Canceled(false), AutoClose(false)
+	: 窗体::Form(), CanClose(false), Canceled(false), AutoClose(false)
 {
 	this->InitializeComponent();
 }
@@ -37,11 +37,11 @@ void LegionProgress::InitializeComponent()
 {
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
-	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
+	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
 	this->SetText("Legion+ | 正在导出资产...");
 	this->SetClientSize({ 409, 119 });
-	this->SetFormBorderStyle(Forms::FormBorderStyle::FixedSingle);
-	this->SetStartPosition(Forms::FormStartPosition::CenterParent);
+	this->SetFormBorderStyle(窗体::FormBorderStyle::FixedSingle);
+	this->SetStartPosition(窗体::FormStartPosition::CenterParent);
 	this->SetMinimizeBox(false);
 	this->SetMaximizeBox(false);
 	this->SetShowInTaskbar(false);
@@ -51,7 +51,7 @@ void LegionProgress::InitializeComponent()
 	this->ExportLabel->SetLocation({ 12, 18 });
 	this->ExportLabel->SetTabIndex(3);
 	this->ExportLabel->SetText("进展：");
-	this->ExportLabel->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left | Forms::AnchorStyles::Right);
+	this->ExportLabel->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left | 窗体::AnchorStyles::Right);
 	this->ExportLabel->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->AddControl(this->ExportLabel);
 
@@ -60,7 +60,7 @@ void LegionProgress::InitializeComponent()
 	this->CancelButton->SetLocation({ 310, 76 });
 	this->CancelButton->SetTabIndex(2);
 	this->CancelButton->SetText("取消");
-	this->CancelButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Right);
+	this->CancelButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->CancelButton->Click += &OnCancelClick;
 	this->AddControl(this->CancelButton);
 
@@ -70,7 +70,7 @@ void LegionProgress::InitializeComponent()
 	this->FinishButton->SetTabIndex(1);
 	this->FinishButton->SetText("Ok");
 	this->FinishButton->SetEnabled(false);
-	this->FinishButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Right);
+	this->FinishButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->FinishButton->Click += &OnFinishClick;
 	this->AddControl(this->FinishButton);
 
@@ -78,7 +78,7 @@ void LegionProgress::InitializeComponent()
 	this->ExportProgressBar->SetSize({ 385, 29 });
 	this->ExportProgressBar->SetLocation({ 12, 38 });
 	this->ExportProgressBar->SetTabIndex(0);
-	this->ExportProgressBar->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left | Forms::AnchorStyles::Right);
+	this->ExportProgressBar->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left | 窗体::AnchorStyles::Right);
 	this->AddControl(this->ExportProgressBar);
 
 	this->ResumeLayout(false);
@@ -89,12 +89,12 @@ void LegionProgress::InitializeComponent()
 	this->SetBackColor({ 33, 33, 33 });
 }
 
-void LegionProgress::OnFinishClick(Forms::Control* Sender)
+void LegionProgress::OnFinishClick(窗体::Control* Sender)
 {
-	((Forms::Form*)Sender->FindForm())->Close();
+	((窗体::Form*)Sender->FindForm())->Close();
 }
 
-void LegionProgress::OnCancelClick(Forms::Control* Sender)
+void LegionProgress::OnCancelClick(窗体::Control* Sender)
 {
 	((LegionProgress*)Sender->FindForm())->CancelProgress();
 }

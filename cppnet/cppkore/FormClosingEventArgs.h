@@ -4,7 +4,7 @@
 #include "CancelEventArgs.h"
 #include "CloseReason.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the on closing event.
 	class FormClosingEventArgs : public CancelEventArgs

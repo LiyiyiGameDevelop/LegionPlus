@@ -6,7 +6,7 @@
 #include "StringBase.h"
 #include "DrawingBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// The style for this specific sub item
 	struct ListViewItemStyle

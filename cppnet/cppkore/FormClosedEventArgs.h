@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "CloseReason.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the on closed event.
 	class FormClosedEventArgs

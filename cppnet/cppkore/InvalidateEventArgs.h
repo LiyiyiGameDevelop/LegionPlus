@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "DrawingBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the OnInvalidate event
 	class InvalidateEventArgs

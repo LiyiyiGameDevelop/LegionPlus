@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents the internal RTTI classes for the Forms controls
 	enum class ControlTypes : uint8_t

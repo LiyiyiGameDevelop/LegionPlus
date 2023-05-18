@@ -4,7 +4,7 @@
 #include "Control.h"
 #include "BorderStyle.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents a panel control.
 	class Panel : public Control

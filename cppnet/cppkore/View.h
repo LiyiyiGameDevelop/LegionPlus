@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <CommCtrl.h>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies how list items are displayed in a ListView control.
 	enum class View

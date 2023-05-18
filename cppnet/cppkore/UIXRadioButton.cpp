@@ -21,7 +21,7 @@ namespace UIX
 			State = UIX::UIXRenderState::Disabled;
 		else if (this->Checked())
 			State = UIX::UIXRenderState::Selected;
-		else if (GetFlag(Forms::ButtonFlags::FlagMouseOver))
+		else if (GetFlag(´°Ìו::ButtonFlags::FlagMouseOver))
 			State = UIX::UIXRenderState::MouseOver;
 
 		Renderer->RenderControlBackground(EventArgs, this, State);

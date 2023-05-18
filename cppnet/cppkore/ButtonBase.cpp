@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ButtonBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ButtonBase::ButtonBase()
 		: Control(), _OwnerDraw(false), _Flags((ButtonFlags)0), _FlatStyle(FlatStyle::Standard), _TextAlign(Drawing::ContentAlignment::MiddleCenter)

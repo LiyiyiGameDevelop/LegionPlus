@@ -13,7 +13,7 @@
 // Remove built-in macros that interfere with the api
 #undef MessageBox
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Displays a message box that can contain text, buttons, and symbols that
 	// inform and instruct the user.

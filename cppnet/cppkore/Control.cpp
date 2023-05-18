@@ -6,7 +6,7 @@
 #include "DrawingBase.h"
 #include "BufferedGraphics.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Custom message index cache
 	uint32_t Control::WM_MOUSEENTER = 0;

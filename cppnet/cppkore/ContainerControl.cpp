@@ -2,7 +2,7 @@
 #include "ContainerControl.h"
 #include "Form.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ContainerControl::ContainerControl()
 		: Control(), _ActiveControl(nullptr), _FocusedControl(nullptr), _AutoScaleDimensions{}, _CurrentAutoScaleDimensions{}, _AutoScaleMode(AutoScaleMode::Inherit), _ScalingNeededOnLayout(false)
@@ -66,13 +66,13 @@ namespace Forms
 		return this->_AutoScaleMode;
 	}
 
-	void ContainerControl::SetAutoScaleMode(Forms::AutoScaleMode Mode)
+	void ContainerControl::SetAutoScaleMode(´°Ìו::AutoScaleMode Mode)
 	{
 		bool ScalingRequired = false;
 
 		if (Mode != this->_AutoScaleMode)
 		{
-			if (_AutoScaleMode != Forms::AutoScaleMode::Inherit)
+			if (_AutoScaleMode != ´°Ìו::AutoScaleMode::Inherit)
 			{
 				this->_AutoScaleDimensions = Drawing::SizeF{};
 			}

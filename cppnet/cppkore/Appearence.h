@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies the appearance of a control.
 	enum class Appearence

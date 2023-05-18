@@ -38,7 +38,7 @@
 #undef SetWindowText
 #undef DrawText
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Defines the base class for controls, which are components
 	// with visual representation.

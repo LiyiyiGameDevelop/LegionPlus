@@ -3,12 +3,12 @@
 #include "resource.h"
 
 LegionSplash::LegionSplash()
-	: Forms::Form()
+	: 窗体::Form()
 {
 	this->InitializeComponent();
 }
 
-void LegionSplash::OnPaint(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs)
+void LegionSplash::OnPaint(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs)
 {
 	Form::OnPaint(EventArgs);
 	if (this->SplashImage != nullptr)
@@ -28,7 +28,7 @@ void LegionSplash::OnLoad()
 	Threading::Thread(SleepTimer).Start(this);
 }
 
-Forms::CreateParams LegionSplash::GetCreateParams()
+窗体::CreateParams LegionSplash::GetCreateParams()
 {
 	auto Cp = Form::GetCreateParams();
 	Cp.ExStyle = WS_EX_LAYERED;
@@ -40,14 +40,14 @@ void LegionSplash::InitializeComponent()
 {
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
-	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
+	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
 	this->SetText("Legion+ Loading...");
 	this->SetClientSize({ 690, 388 });
 	this->SetMinimumSize({ 690, 388 });
-	this->SetFormBorderStyle(Forms::FormBorderStyle::None);
+	this->SetFormBorderStyle(窗体::FormBorderStyle::None);
 	this->SetTopMost(true);
 	this->SetShowInTaskbar(false);
-	this->SetStartPosition(Forms::FormStartPosition::CenterScreen);
+	this->SetStartPosition(窗体::FormStartPosition::CenterScreen);
 
 	this->ResumeLayout(false);
 	this->PerformLayout();

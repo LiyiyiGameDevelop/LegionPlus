@@ -4,7 +4,7 @@
 #include "MouseButtons.h"
 #include "MouseEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for all mouse events
 	class HandledMouseEventArgs : public MouseEventArgs

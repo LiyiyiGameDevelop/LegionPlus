@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies identifiers to indicate the return value of a dialog box.
 	enum class DialogResult

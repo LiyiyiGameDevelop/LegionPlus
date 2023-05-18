@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies the case of characters in a Textbox control.
 	enum class CharacterCasing

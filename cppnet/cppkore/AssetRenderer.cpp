@@ -312,7 +312,7 @@ namespace Assets
 		else
 			this->_Camera.SetUpAxis(RenderViewCameraUpAxis::Y);
 
-		if (this->GetState(Forms::ControlStates::StateCreated))
+		if (this->GetState(窗体::ControlStates::StateCreated))
 			this->Redraw();
 	}
 
@@ -390,26 +390,26 @@ namespace Assets
 #endif
 	}
 
-	void AssetRenderer::OnKeyUp(const std::unique_ptr<Forms::KeyEventArgs>& EventArgs)
+	void AssetRenderer::OnKeyUp(const std::unique_ptr<窗体::KeyEventArgs>& EventArgs)
 	{
 		auto Key = EventArgs->KeyCode();
 
 		switch (Key)
 		{
-		case Forms::Keys::W:
+		case 窗体::Keys::W:
 			this->SetUseWireframe(!this->_UseWireframe);
 			break;
-		case Forms::Keys::B:
+		case 窗体::Keys::B:
 			this->SetShowBones(!this->_ShowBones);
 			break;
-		case Forms::Keys::T:
+		case 窗体::Keys::T:
 			this->SetShowMaterials(!this->_ShowMaterials);
 			break;
-		case Forms::Keys::S:
-		case Forms::Keys::D:
+		case 窗体::Keys::S:
+		case 窗体::Keys::D:
 			if (_MaterialSkinList.Count() > 1)
 			{
-				if (Key == Forms::Keys::S)
+				if (Key == 窗体::Keys::S)
 				{
 					if (--_SelectedSkinIndex < 0)
 						_SelectedSkinIndex = _MaterialSkinList.Count() - 1;
@@ -427,17 +427,17 @@ namespace Assets
 		OpenGLViewport::OnKeyUp(EventArgs);
 	}
 
-	void AssetRenderer::OnMouseDown(const std::unique_ptr<Forms::MouseEventArgs>& EventArgs)
+	void AssetRenderer::OnMouseDown(const std::unique_ptr<窗体::MouseEventArgs>& EventArgs)
 	{
 		this->_TargetMousePosition = Vector2((float)EventArgs->X, (float)EventArgs->Y);
 		OpenGLViewport::OnMouseDown(EventArgs);
 	}
 
-	void AssetRenderer::OnMouseMove(const std::unique_ptr<Forms::MouseEventArgs>& EventArgs)
+	void AssetRenderer::OnMouseMove(const std::unique_ptr<窗体::MouseEventArgs>& EventArgs)
 	{
 		auto IsAltKey = (GetKeyState(VK_MENU) & 0x8000);
 
-		if (EventArgs->Button == Forms::MouseButtons::Left && IsAltKey)
+		if (EventArgs->Button == 窗体::MouseButtons::Left && IsAltKey)
 		{
 			float dPhi = ((float)(this->_TargetMousePosition.Y - EventArgs->Y) / 200.f);
 			float dTheta = ((float)(this->_TargetMousePosition.X - EventArgs->X) / 200.f);
@@ -445,7 +445,7 @@ namespace Assets
 			this->_Camera.Rotate(dTheta, dPhi);
 			this->Redraw();
 		}
-		else if (EventArgs->Button == Forms::MouseButtons::Middle && IsAltKey)
+		else if (EventArgs->Button == 窗体::MouseButtons::Middle && IsAltKey)
 		{
 			float dx = ((float)(this->_TargetMousePosition.X - EventArgs->X));
 			float dy = ((float)(this->_TargetMousePosition.Y - EventArgs->Y));
@@ -456,7 +456,7 @@ namespace Assets
 			this->_Camera.Pan(dx * .1f, dy * .1f);
 			this->Redraw();
 		}
-		else if (EventArgs->Button == Forms::MouseButtons::Right && IsAltKey)
+		else if (EventArgs->Button == 窗体::MouseButtons::Right && IsAltKey)
 		{
 			float dx = ((float)(this->_TargetMousePosition.X - EventArgs->X) / 2.f);
 
@@ -469,7 +469,7 @@ namespace Assets
 		OpenGLViewport::OnMouseMove(EventArgs);
 	}
 
-	void AssetRenderer::OnMouseWheel(const std::unique_ptr<Forms::HandledMouseEventArgs>& EventArgs)
+	void AssetRenderer::OnMouseWheel(const std::unique_ptr<窗体::HandledMouseEventArgs>& EventArgs)
 	{
 		if (this->_DrawingMode == DrawMode::Texture)
 		{

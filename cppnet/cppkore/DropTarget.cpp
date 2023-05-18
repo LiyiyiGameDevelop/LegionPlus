@@ -3,7 +3,7 @@
 #include "DropTarget.h"
 #include "DragEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	DropTarget::DropTarget(Control* Target)
 		: IDropTarget(), _Target(Target), _LastObject(nullptr), _LastEffect(DragDropEffects::None)

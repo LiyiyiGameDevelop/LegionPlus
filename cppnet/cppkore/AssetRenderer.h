@@ -49,7 +49,7 @@ namespace Assets
 	};
 
 	// A 3D asset renderer control.
-	class AssetRenderer : public Forms::OpenGLViewport
+	class AssetRenderer : public 窗体::OpenGLViewport
 	{
 	public:
 		AssetRenderer();
@@ -98,10 +98,10 @@ namespace Assets
 		virtual void OnRender();
 		virtual void OnResize();
 		virtual void OnHandleCreated();
-		virtual void OnKeyUp(const std::unique_ptr<Forms::KeyEventArgs>& EventArgs);
-		virtual void OnMouseDown(const std::unique_ptr<Forms::MouseEventArgs>& EventArgs);
-		virtual void OnMouseMove(const std::unique_ptr<Forms::MouseEventArgs>& EventArgs);
-		virtual void OnMouseWheel(const std::unique_ptr<Forms::HandledMouseEventArgs>& EventArgs);
+		virtual void OnKeyUp(const std::unique_ptr<窗体::KeyEventArgs>& EventArgs);
+		virtual void OnMouseDown(const std::unique_ptr<窗体::MouseEventArgs>& EventArgs);
+		virtual void OnMouseMove(const std::unique_ptr<窗体::MouseEventArgs>& EventArgs);
+		virtual void OnMouseWheel(const std::unique_ptr<窗体::HandledMouseEventArgs>& EventArgs);
 
 	private:
 		// Internal buffers

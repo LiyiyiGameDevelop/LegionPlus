@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <type_traits>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies how a control anchors to the edges of its container.
 	enum class AnchorStyles

@@ -2,7 +2,7 @@
 #include "ColumnHeader.h"
 #include "ListView.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ColumnHeader::ColumnHeader()
 		: ColumnHeader("")
@@ -93,7 +93,7 @@ namespace Forms
 
 	int32_t ColumnHeader::Width() const
 	{
-		if (_OwnerListView != nullptr && _OwnerListView->GetState(Forms::ControlStates::StateCreated) && _OwnerListView->GetState(ControlStates::StateCreated))
+		if (_OwnerListView != nullptr && _OwnerListView->GetState(´°Ìו::ControlStates::StateCreated) && _OwnerListView->GetState(ControlStates::StateCreated))
 		{
 			auto HwndHdr = (HWND)SendMessageA(_OwnerListView->GetHandle(), LVM_GETHEADER, NULL, NULL);
 			if (HwndHdr != NULL)

@@ -14,11 +14,11 @@ void LegionTablePreview::InitializeComponent()
 {
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
-	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
+	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
 	this->SetText("Table Asset Preview");
 	this->SetClientSize({ 775, 481 });
 	this->SetMinimumSize({ 791, 520 });
-	this->SetStartPosition(Forms::FormStartPosition::CenterParent);
+	this->SetStartPosition(窗体::FormStartPosition::CenterParent);
 
 	this->SetBackColor({ 33, 33, 33 });
 
@@ -27,7 +27,7 @@ void LegionTablePreview::InitializeComponent()
 	this->ToggleVectorColorsButton->SetLocation({ 12, 442 });
 	this->ToggleVectorColorsButton->SetTabIndex(2);
 	this->ToggleVectorColorsButton->SetText("Toggle Vector Colors");
-	this->ToggleVectorColorsButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left);
+	this->ToggleVectorColorsButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left);
 	this->ToggleVectorColorsButton->Click += &ToggleShowVectorColors;
 	this->AddControl(this->ToggleVectorColorsButton);
 
@@ -35,8 +35,8 @@ void LegionTablePreview::InitializeComponent()
 	this->AssetsListView->SetSize({ 751, 398 });
 	this->AssetsListView->SetLocation({ 12, 38 });
 	this->AssetsListView->SetTabIndex(0);
-	this->AssetsListView->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left | Forms::AnchorStyles::Right);
-	this->AssetsListView->SetView(Forms::View::Details);
+	this->AssetsListView->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left | 窗体::AnchorStyles::Right);
+	this->AssetsListView->SetView(窗体::View::Details);
 	this->AssetsListView->SetVirtualMode(true);
 	this->AssetsListView->SetFullRowSelect(true);
 	this->AddControl(AssetsListView);
@@ -59,7 +59,7 @@ void LegionTablePreview::InitializeComponent()
 }
 
 
-void LegionTablePreview::GetVirtualItem(const std::unique_ptr<Forms::RetrieveVirtualItemEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionTablePreview::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	auto ThisPtr = (LegionTablePreview*)Sender->FindForm();
 
@@ -124,7 +124,7 @@ void LegionTablePreview::GetVirtualItem(const std::unique_ptr<Forms::RetrieveVir
 
 }
 
-void LegionTablePreview::ToggleShowVectorColors(Forms::Control* Sender)
+void LegionTablePreview::ToggleShowVectorColors(窗体::Control* Sender)
 {
 	auto ThisPtr = (LegionTablePreview*)Sender->FindForm();
 	ThisPtr->bShowVectorColors = !(ThisPtr->bShowVectorColors);
@@ -144,7 +144,7 @@ void LegionTablePreview::ResizeTableToWindow()
 }
 
 
-void LegionTablePreview::OnResized(Forms::Control* Sender)
+void LegionTablePreview::OnResized(窗体::Control* Sender)
 {
 	auto ThisPtr = (LegionTablePreview*)Sender->FindForm();
 	ThisPtr->ResizeTableToWindow();

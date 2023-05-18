@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies the reason for the Form Closing.
 	enum class CloseReason

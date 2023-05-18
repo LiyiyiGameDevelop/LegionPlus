@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "StringBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the LabelEdit event.
 	class LabelEditEventArgs

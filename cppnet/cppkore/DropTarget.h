@@ -4,7 +4,7 @@
 #include <oleidl.h>
 #include "DragDropEffects.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Defined elsewhere
 	class Control;

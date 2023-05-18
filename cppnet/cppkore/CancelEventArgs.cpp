@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CancelEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	CancelEventArgs::CancelEventArgs()
 		: CancelEventArgs(false)

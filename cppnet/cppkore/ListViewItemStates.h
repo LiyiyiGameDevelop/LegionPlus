@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <CommCtrl.h>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Gives state information about a ListView item/sub-item. Used with owner draw.
 	enum class ListViewItemStates

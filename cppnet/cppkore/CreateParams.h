@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "StringBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// A structure that contains the CreateWindow parameters for this control.
 	struct CreateParams

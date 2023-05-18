@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "DragDropEffects.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the DragDrop events.
 	class DragEventArgs

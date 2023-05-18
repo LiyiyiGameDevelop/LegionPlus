@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "TextBox.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	TextBox::TextBox()
 		: TextBoxBase(), _AcceptsReturn(false), _PasswordChar('\0'), _UseSystemPasswordChar(false), _CharacterCasing(CharacterCasing::Normal), _Scrollbars(ScrollBars::None), _TextAlign(HorizontalAlignment::Left), _SelectionSet(false), _SizeRectDirty(true), _IsCalcRects(false), _NCRectTop{}, _NCRectBottom{}, _NCRectLeft{}, _NCRectRight{}

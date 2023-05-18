@@ -3,7 +3,7 @@
 #include "Application.h"
 #include "Button.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	Form::Form()
 		: ContainerControl(), _Owner(nullptr), _FormBorderStyle(FormBorderStyle::Sizable), _FormWindowState(FormWindowState::Normal), _FormStartPosition(FormStartPosition::WindowsDefaultLocation), _DialogResult(DialogResult::None), _CloseReason(CloseReason::None), _Opacity(255), _Icon(nullptr), _FormStateFlags(0x1f), _DefaultButton(nullptr)

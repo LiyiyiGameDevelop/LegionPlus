@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ToolTip.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ToolTip::ToolTip()
 		: Control(), _Flags(0x33), _ToolTipIcon(ToolTipIcon::None), _DelayTimes{}

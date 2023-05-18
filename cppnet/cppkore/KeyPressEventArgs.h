@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace Forms
+namespace ´°Ìו
 {
 	class KeyPressEventArgs
 	{

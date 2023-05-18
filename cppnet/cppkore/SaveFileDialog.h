@@ -6,7 +6,7 @@
 #include "StringBase.h"
 #include "DialogResult.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Handles a dialog prompt that asks for a file to save
 	class SaveFileDialog

@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <type_traits>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// This enumeration represents the TextBoxBase flags...
 	enum class TextBoxFlags

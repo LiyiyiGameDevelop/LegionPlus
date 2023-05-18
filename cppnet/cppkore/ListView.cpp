@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ListView.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ListView::ListView()
 		: Control(), Columns(this), Items(this), _ItemActivation(ItemActivation::Standard), _ListViewAlignment(ListViewAlignment::Top), _BorderStyle(BorderStyle::Fixed3D), _ColumnHeaderStyle(ColumnHeaderStyle::Clickable), _SortOrder(SortOrder::None), _ViewStyle(View::LargeIcon), _VirtualListSize(0), _ColumnIndex(0), _DownButton(MouseButtons::None), _Flags(ListViewFlags::FlagScrollable | ListViewFlags::FlagMultiSelect | ListViewFlags::FlagLabelWrap | ListViewFlags::FlagHideSelection | ListViewFlags::FlagAutoArrange | ListViewFlags::FlagShowGroups)

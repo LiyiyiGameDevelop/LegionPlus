@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Panel.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	Panel::Panel()
 		: Control()

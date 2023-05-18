@@ -6,7 +6,7 @@
 #include "BorderStyle.h"
 #include "ContentAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents a standard Windows label.
 	class Label : public Control

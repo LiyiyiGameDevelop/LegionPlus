@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies constants that define which mouse button was pressed.
 	enum class MouseButtons

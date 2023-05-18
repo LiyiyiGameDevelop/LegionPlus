@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "KeyEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	KeyEventArgs::KeyEventArgs(Keys KeyData)
 		: _KeyData(KeyData), _SuppressKeyPress(false), _Handled(false)

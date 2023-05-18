@@ -4,7 +4,7 @@
 #include "StringBase.h"
 #include "HorizontalAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Externally defined so we don't conflict
 	class ListView;

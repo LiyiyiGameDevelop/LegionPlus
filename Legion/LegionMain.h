@@ -16,7 +16,7 @@
 #include "LegionPreview.h"
 #include "LegionProgress.h"
 
-class LegionMain : public Forms::Form
+class LegionMain : public 窗体::Form
 {
 public:
 	LegionMain();
@@ -31,25 +31,25 @@ public:
 
 	void SetAssetError(int32_t AssetIndex);
 protected:
-	static void OnLoadClick(Forms::Control* Sender);
-	static void OnSettingsClick(Forms::Control* Sender);
-	static void OnExpClick(Forms::Control* Sender);
-	static void OnExpAllClick(Forms::Control* Sender);
-	static void OnSearchClick(Forms::Control* Sender);
-	static void OnClearClick(Forms::Control* Sender);
-	static void OnTitanfallClick(Forms::Control* Sender);
-	static void OnRefreshClick(Forms::Control* Sender);
-	static void OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventArgs, Forms::Control* Sender);
-	static void OnListDoubleClick(Forms::Control* Sender);
-	static void OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, Forms::Control* Sender);
-	static void OnListKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, Forms::Control* Sender);
-	static void OnSearchKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, Forms::Control* Sender);
-	static void OnSelectedIndicesChanged(const std::unique_ptr<Forms::ListViewVirtualItemsSelectionRangeChangedEventArgs>& EventArgs, Forms::Control* Sender);
-	static void GetVirtualItem(const std::unique_ptr<Forms::RetrieveVirtualItemEventArgs>& EventArgs, Forms::Control* Sender);
+	static void OnLoadClick(窗体::Control* Sender);
+	static void OnSettingsClick(窗体::Control* Sender);
+	static void OnExpClick(窗体::Control* Sender);
+	static void OnExpAllClick(窗体::Control* Sender);
+	static void OnSearchClick(窗体::Control* Sender);
+	static void OnClearClick(窗体::Control* Sender);
+	static void OnTitanfallClick(窗体::Control* Sender);
+	static void OnRefreshClick(窗体::Control* Sender);
+	static void OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void OnListDoubleClick(窗体::Control* Sender);
+	static void OnListKeyUp(const std::unique_ptr<KeyEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void OnListKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void OnSearchKeyPressed(const std::unique_ptr<KeyPressEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void OnSelectedIndicesChanged(const std::unique_ptr<窗体::ListViewVirtualItemsSelectionRangeChangedEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemEventArgs>& EventArgs, 窗体::Control* Sender);
 
 	// A trampoline for the callback, then, invoke normal method...
-	static void ExportProgressCallback(uint32_t Progress, Forms::Form* MainForm, bool Finished);
-	static bool CheckStatusCallback(int32_t AssetIndex, Forms::Form* MainForm);
+	static void ExportProgressCallback(uint32_t Progress, 窗体::Form* MainForm, bool Finished);
+	static bool CheckStatusCallback(int32_t AssetIndex, 窗体::Form* MainForm);
 
 private:
 	// Internal routine to setup the component

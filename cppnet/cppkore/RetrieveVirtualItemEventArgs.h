@@ -4,7 +4,7 @@
 #include "StringBase.h"
 #include "ListViewItem.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the RetrieveVirtualItem event.
 	class RetrieveVirtualItemEventArgs

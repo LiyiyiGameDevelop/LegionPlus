@@ -7,7 +7,7 @@
 #include <version.h>
 
 LegionSettings::LegionSettings()
-	: Forms::Form()
+	: 窗体::Form()
 {
 	this->InitializeComponent();
 }
@@ -19,11 +19,11 @@ void LegionSettings::InitializeComponent()
 
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
-	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
+	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
 	this->SetText("Legion+ | Application Settings");
 	this->SetClientSize({ WindowX, WindowY });
-	this->SetFormBorderStyle(Forms::FormBorderStyle::FixedSingle);
-	this->SetStartPosition(Forms::FormStartPosition::CenterParent);
+	this->SetFormBorderStyle(窗体::FormBorderStyle::FixedSingle);
+	this->SetStartPosition(窗体::FormStartPosition::CenterParent);
 	this->SetMinimizeBox(false);
 	this->SetMaximizeBox(false);
 
@@ -35,7 +35,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox1->SetLocation({ 12, 10 });
 	this->groupBox1->SetTabIndex(3);
 	this->groupBox1->SetText("General Directory Settings");
-	this->groupBox1->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->groupBox1->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->AddControl(this->groupBox1);
 
 	//
@@ -47,7 +47,7 @@ void LegionSettings::InitializeComponent()
 	this->ExportBrowseFolder->SetTabIndex(5);
 	this->ExportBrowseFolder->SetReadOnly(true);
 	this->ExportBrowseFolder->SetText("Click on \"Browse\" to set a custom export directory");
-	this->ExportBrowseFolder->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Right);
+	this->ExportBrowseFolder->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->groupBox1->AddControl(this->ExportBrowseFolder);
 
 	this->ExportBrowseButton = new UIX::UIXButton();
@@ -55,7 +55,7 @@ void LegionSettings::InitializeComponent()
 	this->ExportBrowseButton->SetLocation({ 365, 25 });
 	this->ExportBrowseButton->SetTabIndex(5);
 	this->ExportBrowseButton->SetText("Browse");
-	this->ExportBrowseButton->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Right);
+	this->ExportBrowseButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->groupBox1->AddControl(this->ExportBrowseButton);
 
 	// 
@@ -66,7 +66,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox2->SetLocation({ 12, 80 });
 	this->groupBox2->SetTabIndex(3);
 	this->groupBox2->SetText("Toggle Settings");
-	this->groupBox2->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->groupBox2->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->AddControl(this->groupBox2);
 
 	// 
@@ -77,7 +77,7 @@ void LegionSettings::InitializeComponent()
 	this->ToggleOverwriting->SetLocation({ 15, 20 });
 	this->ToggleOverwriting->SetTabIndex(2);
 	this->ToggleOverwriting->SetText("Overwrite Files");
-	this->ToggleOverwriting->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->ToggleOverwriting->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox2->AddControl(this->ToggleOverwriting);
 
 	this->ToggleAudioLanguageFolders = new UIX::UIXCheckBox();
@@ -85,7 +85,7 @@ void LegionSettings::InitializeComponent()
 	this->ToggleAudioLanguageFolders->SetLocation({ 130, 20 });
 	this->ToggleAudioLanguageFolders->SetTabIndex(2);
 	this->ToggleAudioLanguageFolders->SetText("Audio Language Folders");
-	this->ToggleAudioLanguageFolders->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->ToggleAudioLanguageFolders->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox2->AddControl(this->ToggleAudioLanguageFolders);
 
 	this->ToggleUseFullPaths = new UIX::UIXCheckBox();
@@ -93,7 +93,7 @@ void LegionSettings::InitializeComponent()
 	this->ToggleUseFullPaths->SetLocation({ 290, 20 });
 	this->ToggleUseFullPaths->SetTabIndex(2);
 	this->ToggleUseFullPaths->SetText("Show Full Asset Paths");
-	this->ToggleUseFullPaths->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->ToggleUseFullPaths->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox2->AddControl(this->ToggleUseFullPaths);
 
 	this->ToggleUseTxtrGuids = new UIX::UIXCheckBox();
@@ -101,7 +101,7 @@ void LegionSettings::InitializeComponent()
 	this->ToggleUseTxtrGuids->SetLocation({ 15, 43 });
 	this->ToggleUseTxtrGuids->SetTabIndex(2);
 	this->ToggleUseTxtrGuids->SetText("Use Image Guids");
-	this->ToggleUseTxtrGuids->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->ToggleUseTxtrGuids->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox2->AddControl(this->ToggleUseTxtrGuids);
 
 	this->ToggleSkinExport = new UIX::UIXCheckBox();
@@ -109,7 +109,7 @@ void LegionSettings::InitializeComponent()
 	this->ToggleSkinExport->SetLocation({ 130, 43 });
 	this->ToggleSkinExport->SetTabIndex(2);
 	this->ToggleSkinExport->SetText("Export Skins");
-	this->ToggleSkinExport->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->ToggleSkinExport->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox2->AddControl(this->ToggleSkinExport);
 
 	//
@@ -120,7 +120,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox3->SetLocation({ 480, 10 });
 	this->groupBox3->SetTabIndex(3);
 	this->groupBox3->SetText("About");
-	this->groupBox3->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->groupBox3->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->AddControl(this->groupBox3);
 
 	//
@@ -135,7 +135,7 @@ void LegionSettings::InitializeComponent()
 #else
 	this->labelVersion->SetText("Version " UI_VER_STR "+" STRINGIZE(NIGHTLY) " (Nightly)");
 #endif
-	this->labelVersion->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->labelVersion->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->labelVersion->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox3->AddControl(this->labelVersion);
 
@@ -144,7 +144,7 @@ void LegionSettings::InitializeComponent()
 	this->labelAbout->SetLocation({ 12, 40 });
 	this->labelAbout->SetTabIndex(0);
 	this->labelAbout->SetText("Legion is the Apex Legends asset extraction tool. Originally created by DTZxPorter in 2019. Currently maintained by various contributors on GitHub.");
-	this->labelAbout->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->labelAbout->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->labelAbout->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox3->AddControl(this->labelAbout);
 	//
@@ -174,7 +174,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox4->SetLocation({ 12, 155 });
 	this->groupBox4->SetTabIndex(3);
 	this->groupBox4->SetText("Load Settings");
-	this->groupBox4->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->groupBox4->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->AddControl(this->groupBox4);
 
 
@@ -184,7 +184,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadModels->SetLocation({ 15, 20 });
 	this->LoadModels->SetTabIndex(0);
 	this->LoadModels->SetText("Load Models");
-	this->LoadModels->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadModels->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadModels);
 
 	//	Load Images
@@ -193,7 +193,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadImages->SetLocation({ 15, 43 });
 	this->LoadImages->SetTabIndex(2);
 	this->LoadImages->SetText("Load Images");
-	this->LoadImages->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadImages->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadImages);
 
 	//	Load Materials
@@ -202,7 +202,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadMaterials->SetLocation({ 15, 66 });
 	this->LoadMaterials->SetTabIndex(3);
 	this->LoadMaterials->SetText("Load Materials");
-	this->LoadMaterials->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadMaterials->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadMaterials);
 
 	//	Load RSONs
@@ -211,7 +211,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadRSONs->SetLocation({ 15, 89 });
 	this->LoadRSONs->SetTabIndex(2);
 	this->LoadRSONs->SetText("Load RSONs");
-	this->LoadRSONs->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadRSONs->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadRSONs);
 
 	//	Load ShaderSets
@@ -220,7 +220,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadShaderSets->SetLocation({ 15, 112 });
 	this->LoadShaderSets->SetTabIndex(2);
 	this->LoadShaderSets->SetText("Load ShaderSets");
-	this->LoadShaderSets->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadShaderSets->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadShaderSets);
 
 	//	Load Effects
@@ -229,7 +229,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadEffects->SetLocation({ 15, 135 });
 	this->LoadEffects->SetTabIndex(2);
 	this->LoadEffects->SetText("Load Effects");
-	this->LoadEffects->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadEffects->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadEffects);
 
 	//	Load Animations
@@ -238,7 +238,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadAnimations->SetLocation({ 130, 20 });
 	this->LoadAnimations->SetTabIndex(1);
 	this->LoadAnimations->SetText("Load Animations");
-	this->LoadAnimations->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadAnimations->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadAnimations);
 
 	//	Load Anim Seqs
@@ -247,7 +247,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadAnimationSeqs->SetLocation({ 130, 43 });
 	this->LoadAnimationSeqs->SetTabIndex(2);
 	this->LoadAnimationSeqs->SetText("Load Anim Seqs");
-	this->LoadAnimationSeqs->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadAnimationSeqs->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadAnimationSeqs);
 
 	//	Load UI Images
@@ -256,7 +256,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadUIImages->SetLocation({ 130, 66 });
 	this->LoadUIImages->SetTabIndex(2);
 	this->LoadUIImages->SetText("Load UI Images");
-	this->LoadUIImages->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadUIImages->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadUIImages);
 
 	//	Load DataTables
@@ -265,7 +265,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadDataTables->SetLocation({ 130, 89 });
 	this->LoadDataTables->SetTabIndex(2);
 	this->LoadDataTables->SetText("Load DataTables");
-	this->LoadDataTables->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadDataTables->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadDataTables);
 
 	//	Load SettingsSets
@@ -274,7 +274,7 @@ void LegionSettings::InitializeComponent()
 	this->LoadSettingsSets->SetLocation({ 130, 112 });
 	this->LoadSettingsSets->SetTabIndex(2);
 	this->LoadSettingsSets->SetText("Load SettingsSets");
-	this->LoadSettingsSets->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->LoadSettingsSets->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->groupBox4->AddControl(this->LoadSettingsSets);
 
 	//
@@ -285,7 +285,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox5->SetLocation({ 359, 155 });
 	this->groupBox5->SetTabIndex(0);
 	this->groupBox5->SetText("Assets Export Settings");
-	this->groupBox5->SetAnchor(Forms::AnchorStyles::Bottom | Forms::AnchorStyles::Left | Forms::AnchorStyles::Right);
+	this->groupBox5->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left | 窗体::AnchorStyles::Right);
 	this->AddControl(this->groupBox5);
 
 	//
@@ -296,7 +296,7 @@ void LegionSettings::InitializeComponent()
 	this->label1->SetLocation({ 20, 20 });
 	this->label1->SetTabIndex(8);
 	this->label1->SetText("Model Format");
-	this->label1->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label1->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label1->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label1);
 
@@ -304,8 +304,8 @@ void LegionSettings::InitializeComponent()
 	this->ModelExportFormat->SetSize({ 90, 21 });
 	this->ModelExportFormat->SetLocation({ 20, 35 });
 	this->ModelExportFormat->SetTabIndex(9);
-	this->ModelExportFormat->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->ModelExportFormat->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->ModelExportFormat->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->ModelExportFormat->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->ModelExportFormat->Items.Add("Cast");
 	this->ModelExportFormat->Items.Add("FBX");
 	this->ModelExportFormat->Items.Add("Maya");
@@ -326,7 +326,7 @@ void LegionSettings::InitializeComponent()
 	this->label2->SetLocation({ 125, 20 });
 	this->label2->SetTabIndex(11);
 	this->label2->SetText("Animation Format");
-	this->label2->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label2->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label2->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label2);
 
@@ -334,8 +334,8 @@ void LegionSettings::InitializeComponent()
 	this->AnimExportFormat->SetSize({ 90, 21 });
 	this->AnimExportFormat->SetLocation({ 125, 35 });
 	this->AnimExportFormat->SetTabIndex(0);
-	this->AnimExportFormat->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->AnimExportFormat->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->AnimExportFormat->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->AnimExportFormat->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->AnimExportFormat->Items.Add("Cast");
 	this->AnimExportFormat->Items.Add("SEAnim");
 	this->AnimExportFormat->Items.Add("RAnim");
@@ -349,7 +349,7 @@ void LegionSettings::InitializeComponent()
 	this->label7->SetLocation({ 230, 20 });
 	this->label7->SetTabIndex(9);
 	this->label7->SetText("Material CPU Format");
-	this->label7->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label7->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label7->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label7);
 
@@ -357,8 +357,8 @@ void LegionSettings::InitializeComponent()
 	this->MatCPUExportFormat->SetSize({ 90, 21 });
 	this->MatCPUExportFormat->SetLocation({ 230, 35 });
 	this->MatCPUExportFormat->SetTabIndex(0);
-	this->MatCPUExportFormat->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->MatCPUExportFormat->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->MatCPUExportFormat->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->MatCPUExportFormat->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->MatCPUExportFormat->Items.Add("None");
 	this->MatCPUExportFormat->Items.Add("Struct");
 	this->MatCPUExportFormat->Items.Add("CPU");
@@ -372,7 +372,7 @@ void LegionSettings::InitializeComponent()
 	this->label8->SetLocation({ 230, 65 });
 	this->label8->SetTabIndex(9);
 	this->label8->SetText("Audio Format");
-	this->label8->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label8->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label8->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label8);
 
@@ -380,8 +380,8 @@ void LegionSettings::InitializeComponent()
 	this->AudioExportFormat->SetSize({ 90, 21 });
 	this->AudioExportFormat->SetLocation({ 230, 80 });
 	this->AudioExportFormat->SetTabIndex(0);
-	this->AudioExportFormat->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->AudioExportFormat->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->AudioExportFormat->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->AudioExportFormat->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->AudioExportFormat->Items.Add("WAV");
 	this->AudioExportFormat->Items.Add("BinkA");
 	this->groupBox5->AddControl(this->AudioExportFormat);
@@ -394,7 +394,7 @@ void LegionSettings::InitializeComponent()
 	this->label3->SetLocation({ 20, 65 });
 	this->label3->SetTabIndex(9);
 	this->label3->SetText("Image Format");
-	this->label3->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label3->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label3->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label3);
 
@@ -402,8 +402,8 @@ void LegionSettings::InitializeComponent()
 	this->ImageExportFormat->SetSize({ 90, 21 });
 	this->ImageExportFormat->SetLocation({ 20, 80 });
 	this->ImageExportFormat->SetTabIndex(0);
-	this->ImageExportFormat->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->ImageExportFormat->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->ImageExportFormat->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->ImageExportFormat->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->ImageExportFormat->Items.Add("DDS");
 	this->ImageExportFormat->Items.Add("PNG");
 	this->ImageExportFormat->Items.Add("TIFF");
@@ -418,7 +418,7 @@ void LegionSettings::InitializeComponent()
 	this->label4->SetLocation({ 125, 65 });
 	this->label4->SetTabIndex(9);
 	this->label4->SetText("Text Format");
-	this->label4->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label4->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label4->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label4);
 
@@ -426,8 +426,8 @@ void LegionSettings::InitializeComponent()
 	this->TextExportFormat->SetSize({ 90, 20 });
 	this->TextExportFormat->SetLocation({ 125, 80 });
 	this->TextExportFormat->SetTabIndex(0);
-	this->TextExportFormat->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->TextExportFormat->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->TextExportFormat->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->TextExportFormat->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->TextExportFormat->Items.Add("CSV");
 	this->TextExportFormat->Items.Add("TXT");
 	this->groupBox5->AddControl(this->TextExportFormat);
@@ -440,7 +440,7 @@ void LegionSettings::InitializeComponent()
 	this->label5->SetLocation({ 20, 110 });
 	this->label5->SetTabIndex(9);
 	this->label5->SetText("Audio Language");
-	this->label5->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label5->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label5->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label5);
 
@@ -448,8 +448,8 @@ void LegionSettings::InitializeComponent()
 	this->AudioLanguage->SetSize({ 90, 20 });
 	this->AudioLanguage->SetLocation({ 20, 125 });
 	this->AudioLanguage->SetTabIndex(0);
-	this->AudioLanguage->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->AudioLanguage->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->AudioLanguage->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->AudioLanguage->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	for (int i = (int)MilesLanguageID::English; i <= (int)MilesLanguageID::Korean; i++) {
 		this->AudioLanguage->Items.Add(imstring(LanguageName((MilesLanguageID)i)));
 	}
@@ -463,7 +463,7 @@ void LegionSettings::InitializeComponent()
 	this->label6->SetLocation({ 125, 110 });
 	this->label6->SetTabIndex(9);
 	this->label6->SetText("Normal Recalculation");
-	this->label6->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
+	this->label6->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->label6->SetTextAlign(Drawing::ContentAlignment::TopLeft);
 	this->groupBox5->AddControl(this->label6);
 
@@ -471,8 +471,8 @@ void LegionSettings::InitializeComponent()
 	this->NormalRecalcType->SetSize({ 90, 20 });
 	this->NormalRecalcType->SetLocation({ 125, 125 });
 	this->NormalRecalcType->SetTabIndex(0);
-	this->NormalRecalcType->SetAnchor(Forms::AnchorStyles::Top | Forms::AnchorStyles::Left);
-	this->NormalRecalcType->SetDropDownStyle(Forms::ComboBoxStyle::DropDownList);
+	this->NormalRecalcType->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
+	this->NormalRecalcType->SetDropDownStyle(窗体::ComboBoxStyle::DropDownList);
 	this->NormalRecalcType->Items.Add("None");
 	this->NormalRecalcType->Items.Add("DirectX");
 	this->NormalRecalcType->Items.Add("OpenGL");
@@ -640,12 +640,12 @@ void LegionSettings::LoadSettings()
 	}
 }
 
-void LegionSettings::OnLoad(Forms::Control* Sender)
+void LegionSettings::OnLoad(窗体::Control* Sender)
 {
 	((LegionSettings*)Sender->FindForm())->LoadSettings();
 }
 
-void LegionSettings::OnClose(const std::unique_ptr<FormClosingEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionSettings::OnClose(const std::unique_ptr<FormClosingEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	auto ThisPtr = (LegionSettings*)Sender->FindForm();
 
@@ -848,17 +848,17 @@ void LegionSettings::OnClose(const std::unique_ptr<FormClosingEventArgs>& EventA
 		g_pLegionMain->RefreshView();
 }
 
-void LegionSettings::OnGithubClick(Forms::Control* Sender)
+void LegionSettings::OnGithubClick(窗体::Control* Sender)
 {
 	Diagnostics::Process::Start("https://github.com/r-ex/LegionPlus");
 }
 
-void LegionSettings::OnDiscordClick(Forms::Control* Sender)
+void LegionSettings::OnDiscordClick(窗体::Control* Sender)
 {
 	Diagnostics::Process::Start("https://discord.gg/ADek6fxVGe");
 }
 
-void LegionSettings::OnBrowseClick(Forms::Control* Sender)
+void LegionSettings::OnBrowseClick(窗体::Control* Sender)
 {
 	auto ThisPtr = (LegionSettings*)Sender->FindForm();
 	auto ExportDirectory = ThisPtr->ExportBrowseFolder->Text();

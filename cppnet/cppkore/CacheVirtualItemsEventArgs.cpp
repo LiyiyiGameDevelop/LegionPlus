@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CacheVirtualItemsEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	CacheVirtualItemsEventArgs::CacheVirtualItemsEventArgs(int32_t Start, int32_t End)
 		: StartIndex(Start), EndIndex(End)

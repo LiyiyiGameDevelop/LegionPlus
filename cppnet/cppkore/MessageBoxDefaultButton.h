@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// This enumeration represents the possible default message box buttons.
 	enum class MessageBoxDefaultButton

@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// The event class that is created when the selection state of a ListViewItem is changed.
 	class ListViewVirtualItemsSelectionRangeChangedEventArgs

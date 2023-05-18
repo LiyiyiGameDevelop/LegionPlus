@@ -6,7 +6,7 @@
 #include "ButtonFlags.h"
 #include "ContentAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Implements the basic functionality required by a button control.
 	class ButtonBase : public Control

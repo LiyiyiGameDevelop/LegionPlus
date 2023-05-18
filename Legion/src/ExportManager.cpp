@@ -92,7 +92,7 @@ string ExportManager::GetMapExportPath()
 	return Result;
 }
 
-void ExportManager::ExportMilesAssets(const std::unique_ptr<MilesLib>& MilesFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, Forms::Form* MainForm)
+void ExportManager::ExportMilesAssets(const std::unique_ptr<MilesLib>& MilesFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, ´°Ìו::Form* MainForm)
 {
 	std::atomic<uint32_t> AssetIndex = 0;
 
@@ -150,7 +150,7 @@ void ExportManager::ExportMilesAssets(const std::unique_ptr<MilesLib>& MilesFile
 
 }
 
-void ExportManager::ExportRpakAssets(const std::unique_ptr<RpakLib>& RpakFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, Forms::Form* MainForm)
+void ExportManager::ExportRpakAssets(const std::unique_ptr<RpakLib>& RpakFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, ´°Ìו::Form* MainForm)
 {
 	std::atomic<uint32_t> AssetIndex = 0;
 

@@ -4,7 +4,7 @@
 #include <commdlg.h>
 #include <ShlObj.h>
 
-namespace Forms
+namespace ´°Ìו
 {
 	const string BuildOpenFileFilter(const string& Filter)
 	{

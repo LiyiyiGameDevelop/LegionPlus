@@ -4,7 +4,7 @@
 // We need to include the OpenGL classes
 #include "Mangler.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	OpenGLViewport::OpenGLViewport()
 		: Control(), _DCHandle(nullptr), _GLHandle(nullptr)

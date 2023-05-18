@@ -3,7 +3,7 @@
 #include "Control.h"
 #include "AutoScaleMode.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// TODO: Process [*] Key functions, virtual...
 
@@ -32,7 +32,7 @@ namespace Forms
 		// Determines the scaling mode of this control.
 		AutoScaleMode AutoScaleMode();
 		// Determines the scaling mode of this control.
-		void SetAutoScaleMode(Forms::AutoScaleMode Mode);
+		void SetAutoScaleMode(´°Ìו::AutoScaleMode Mode);
 
 		// Override WndProc for specific form messages.
 		virtual void WndProc(Message& Msg);
@@ -77,7 +77,7 @@ namespace Forms
 		Drawing::SizeF _AutoScaleDimensions;
 		Drawing::SizeF _CurrentAutoScaleDimensions;
 
-		Forms::AutoScaleMode _AutoScaleMode;
+		´°Ìו::AutoScaleMode _AutoScaleMode;
 		bool _ScalingNeededOnLayout;
 
 		// We must define each window message handler here...

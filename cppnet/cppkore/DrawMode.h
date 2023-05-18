@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies responsibility for drawing a control or portion of a control.
 	enum class DrawMode

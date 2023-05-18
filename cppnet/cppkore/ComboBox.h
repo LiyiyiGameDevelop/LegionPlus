@@ -9,7 +9,7 @@
 #include "FlatStyle.h"
 #include "ComboBoxStyle.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Displays an editing field and a list control.
 	class ComboBox : public Control

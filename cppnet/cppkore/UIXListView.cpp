@@ -9,7 +9,7 @@ namespace UIX
 	{
 		this->SetOwnerDraw(true);
 		this->SetDoubleBuffered(true);
-		this->SetBorderStyle(Forms::BorderStyle::None);
+		this->SetBorderStyle(´°Ìו::BorderStyle::None);
 		this->SetBackColor(UIXTheme::GetRenderer()->GetRenderColor(UIX::UIXRenderColor::BackgroundLight));
 	}
 

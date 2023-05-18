@@ -6,7 +6,7 @@
 #include "DrawingBase.h"
 #include "Font.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the OnDraw event.
 	class DrawToolTipEventArgs

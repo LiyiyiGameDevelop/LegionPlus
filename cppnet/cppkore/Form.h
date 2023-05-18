@@ -15,7 +15,7 @@
 #include "FormClosingEventArgs.h"
 #include "PaintFrameEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	class Form : public ContainerControl
 	{

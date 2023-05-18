@@ -2,7 +2,7 @@
 
 #include <Kore.h>
 
-class LegionPreview : public Forms::Form
+class LegionPreview : public ´°Ìו::Form
 {
 public:
 	LegionPreview();

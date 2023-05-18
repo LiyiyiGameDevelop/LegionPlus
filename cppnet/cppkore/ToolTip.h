@@ -8,7 +8,7 @@
 #include "PopupEventArgs.h"
 #include "DrawToolTipEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides a small pop-up window containing a line of text
 	// that describes the purpose of a tool or control.

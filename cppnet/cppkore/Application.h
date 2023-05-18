@@ -4,7 +4,7 @@
 #include <atomic>
 #include "Form.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides static methods and properties to manage an application.
 	class Application

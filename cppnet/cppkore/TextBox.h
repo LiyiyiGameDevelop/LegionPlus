@@ -7,7 +7,7 @@
 #include "CharacterCasing.h"
 #include "HorizontalAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents a Windows text box control.
 	class TextBox : public TextBoxBase

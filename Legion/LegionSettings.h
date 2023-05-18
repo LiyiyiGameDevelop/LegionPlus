@@ -9,7 +9,7 @@
 #include "UIXGroupBox.h"
 #include "UIXRadioButton.h"
 
-class LegionSettings : public Forms::Form
+class LegionSettings : public 窗体::Form
 {
 public:
 	LegionSettings();
@@ -22,11 +22,11 @@ private:
 	// Loads settings from the application config
 	void LoadSettings();
 
-	static void OnLoad(Forms::Control* Sender);
-	static void OnClose(const std::unique_ptr<FormClosingEventArgs>& EventArgs, Forms::Control* Sender);
-	static void OnBrowseClick(Forms::Control* Sender);
-	static void OnGithubClick(Forms::Control* Sender);
-	static void OnDiscordClick(Forms::Control* Sender);
+	static void OnLoad(窗体::Control* Sender);
+	static void OnClose(const std::unique_ptr<FormClosingEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void OnBrowseClick(窗体::Control* Sender);
+	static void OnGithubClick(窗体::Control* Sender);
+	static void OnDiscordClick(窗体::Control* Sender);
 
 	// Internal controls reference
 	UIX::UIXTextBox* ExportBrowseFolder;

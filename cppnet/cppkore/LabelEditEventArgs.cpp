@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "LabelEditEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	LabelEditEventArgs::LabelEditEventArgs(int32_t Item)
 		: Item(Item), Label(""), CancelEdit(false)

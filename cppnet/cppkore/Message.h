@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <Windows.h>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Implements a Windows message.
 	struct Message

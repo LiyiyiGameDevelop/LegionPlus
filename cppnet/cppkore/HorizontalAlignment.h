@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies how an object or text in a control is
 	// horizontally aligned relative to an element of the control.

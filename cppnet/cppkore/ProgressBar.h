@@ -7,7 +7,7 @@
 #include "ContentAlignment.h"
 #include "ProgressBarStyle.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents a Windows progress bar control.
 	class ProgressBar : public Control

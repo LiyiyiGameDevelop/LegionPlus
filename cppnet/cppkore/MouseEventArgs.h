@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "MouseButtons.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for all mouse events
 	class MouseEventArgs

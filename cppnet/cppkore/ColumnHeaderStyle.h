@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies how ListView column headers behave.
 	enum class ColumnHeaderStyle

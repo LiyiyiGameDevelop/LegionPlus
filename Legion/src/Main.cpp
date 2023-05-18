@@ -14,13 +14,17 @@
 
 using namespace System;
 
+// 判断程序运行模式
+// 如为 DEBUG 模式则执行 main() 函数，
 #if _DEBUG
 int main()
+
+// 如为 其他 则执行 WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 函数。
 #else
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 #endif
 {
-	Forms::Application::EnableVisualStyles();
+	窗体::Application::EnableVisualStyles();
 
 	UIX::UIXTheme::InitializeRenderer(new Themes::KoreTheme());
 	ExportManager::InitializeExporter();
@@ -43,23 +47,23 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 
 	// 设置进程优先级
 	{
-		wstring sFmt = ((wstring)cmdline.GetParamValue(L"--prioritylvl")).ToLower();
+		wstring wString_调频 = ((wstring)cmdline.GetParamValue(L"--prioritylvl")).ToLower();
 
-		// if the param isn't set, leave the priority alone
-		if (sFmt != L"")
+		// 如果未设置参数，则保留优先级
+		if (wString_调频 != L"")
 		{
 			DWORD priorityClass = 0;
-			if (sFmt == L"realtime")
+			if (wString_调频 == L"realtime") // 实时
 				priorityClass = REALTIME_PRIORITY_CLASS;
-			if (sFmt == L"high")
+			if (wString_调频 == L"high") // 高
 				priorityClass = HIGH_PRIORITY_CLASS;
-			if (sFmt == L"above_normal")
+			if (wString_调频 == L"above_normal") // 高于正常水平
 				priorityClass = ABOVE_NORMAL_PRIORITY_CLASS;
-			if (sFmt == L"normal")
+			if (wString_调频 == L"normal") // 正常
 				priorityClass = NORMAL_PRIORITY_CLASS;
-			if (sFmt == L"below_normal")
+			if (wString_调频 == L"below_normal") // 低于正常水平
 				priorityClass = BELOW_NORMAL_PRIORITY_CLASS;
-			if (sFmt == L"idle")
+			if (wString_调频 == L"idle") // 空闲
 				priorityClass = IDLE_PRIORITY_CLASS;
 
 			SetPriorityClass(GetCurrentProcess(), priorityClass);
@@ -316,7 +320,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 						EAsset.AssetIndex = 0;
 						ExportAssets.EmplaceBack(EAsset);
 					}
-					ExportManager::ExportRpakAssets(Rpak, ExportAssets, [](uint32_t i, Forms::Form*, bool) {}, [](int32_t i, Forms::Form*) -> bool { return false; }, nullptr);
+					ExportManager::ExportRpakAssets(Rpak, ExportAssets, [](uint32_t i, 窗体::Form*, bool) {}, [](int32_t i, 窗体::Form*) -> bool { return false; }, nullptr);
 				}
 				else if (filePath.EndsWith(".mbnk")) {
 
@@ -333,7 +337,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 						EAsset.AssetIndex = 0;
 						ExportAssets.EmplaceBack(EAsset);
 					}
-					ExportManager::ExportMilesAssets(Audio, ExportAssets, [](uint32_t i, Forms::Form*, bool) {}, [](int32_t i, Forms::Form*) -> bool { return false; }, nullptr);
+					ExportManager::ExportMilesAssets(Audio, ExportAssets, [](uint32_t i, 窗体::Form*, bool) {}, [](int32_t i, 窗体::Form*) -> bool { return false; }, nullptr);
 				}
 				else if (!filePath.EndsWith(".rpak" || ".mbnk")) {
 
@@ -391,7 +395,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 			main->LoadApexFile(paks);
 			main->RefreshView();
 		}
-		Forms::Application::Run(main);
+		窗体::Application::Run(main);
 	}
 
 	UIX::UIXTheme::ShutdownRenderer();

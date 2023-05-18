@@ -5,7 +5,7 @@
 #include "ButtonBase.h"
 #include "DialogResult.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents a Windows button.
 	class Button : public ButtonBase

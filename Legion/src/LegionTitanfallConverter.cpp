@@ -3,7 +3,7 @@
 #include "ExportManager.h"
 
 LegionTitanfallConverter::LegionTitanfallConverter()
-	: Forms::Form()
+	: 窗体::Form()
 {
 	this->InitializeComponent();
 }
@@ -31,12 +31,12 @@ void LegionTitanfallConverter::OnPaint(const std::unique_ptr<PaintEventArgs>& Ev
 	Drawing::TextRenderer::DrawText(EventArgs->Graphics, "Drag and drop *.mdl files here to convert", ft, Region, Drawing::Color::White, Drawing::TextFormatFlags::VerticalCenter | Drawing::TextFormatFlags::HorizontalCenter | Drawing::TextFormatFlags::SingleLine);
 }
 
-void LegionTitanfallConverter::FormDragEnter(const std::unique_ptr<Forms::DragEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionTitanfallConverter::FormDragEnter(const std::unique_ptr<窗体::DragEventArgs>& EventArgs, 窗体::Control* Sender)
 {
-	EventArgs->Effect = Forms::DragDropEffects::Copy;
+	EventArgs->Effect = 窗体::DragDropEffects::Copy;
 }
 
-void LegionTitanfallConverter::FormDragDrop(const std::unique_ptr<Forms::DragEventArgs>& EventArgs, Forms::Control* Sender)
+void LegionTitanfallConverter::FormDragDrop(const std::unique_ptr<窗体::DragEventArgs>& EventArgs, 窗体::Control* Sender)
 {
 	STGMEDIUM rSM{};
 	FORMATETC rFmt{};
@@ -66,13 +66,13 @@ void LegionTitanfallConverter::InitializeComponent()
 {
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
-	this->SetAutoScaleMode(Forms::AutoScaleMode::Font);
+	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
 	this->SetText("Legion+ | Titanfall 2 Model & Animation Converter");
 	this->SetClientSize({ 658, 410 });
-	this->SetStartPosition(Forms::FormStartPosition::CenterParent);
+	this->SetStartPosition(窗体::FormStartPosition::CenterParent);
 	this->SetMinimizeBox(false);
 	this->SetMaximizeBox(false);
-	this->SetFormBorderStyle(Forms::FormBorderStyle::FixedSingle);
+	this->SetFormBorderStyle(窗体::FormBorderStyle::FixedSingle);
 
 	this->ResumeLayout(false);
 	this->PerformLayout();

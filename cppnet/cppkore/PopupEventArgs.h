@@ -5,7 +5,7 @@
 #include "DrawingBase.h"
 #include "CancelEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the on popup event.
 	class PopupEventArgs : public CancelEventArgs

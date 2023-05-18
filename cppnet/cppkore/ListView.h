@@ -22,7 +22,7 @@
 #include "DrawListViewColumnHeaderEventArgs.h"
 #include "ListViewVirtualItemsSelectionRangeChangedEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Displays a list of items in one of four
 	// views. Each item displays a caption and optionally an image.

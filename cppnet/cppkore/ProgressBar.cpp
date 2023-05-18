@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ProgressBar.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ProgressBar::ProgressBar()
 		: Control(), _Minimum(0), _Maximum(100), _Step(10), _Value(0), _MarqueeSpeed(100)

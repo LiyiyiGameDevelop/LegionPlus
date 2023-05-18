@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "DrawToolTipEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	DrawToolTipEventArgs::DrawToolTipEventArgs(HDC Dc, Control* Window, Control* Ctrl, Drawing::Rectangle Bounds, const string& Text, Drawing::Color BackColor, Drawing::Color ForeColor, Drawing::Font* Font)
 		: _Dc(Dc), AssociatedWindow(Window), AssociatedControl(Ctrl), Bounds(Bounds), ToolTipText(Text), BackColor(BackColor), ForeColor(ForeColor), Font(Font)

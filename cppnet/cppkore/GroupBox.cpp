@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GroupBox.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	GroupBox::GroupBox()
 		: Control(), _OwnerDraw(false), _FlatStyle(FlatStyle::Standard)

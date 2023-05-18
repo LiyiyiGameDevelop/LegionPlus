@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MessageBox.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	DialogResult MessageBox::Win32ToDialogResult(uint32_t Value)
 	{

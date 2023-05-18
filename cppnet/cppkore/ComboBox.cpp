@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ComboBox.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ComboBox::ComboBox()
 		: Control(), Items(this), _DrawMode(DrawMode::Normal), _FlatStyle(FlatStyle::Standard), _DropDownStyle(ComboBoxStyle::DropDown), _IntegralHeight(true), _DropDownWidth(-1), _DropDownHeight(-1), _MaxDropDownItems(8), _MaximumLength(SHRT_MAX), _SelectedIndex(-1), _ChildEdit(nullptr), _ChildListBox(nullptr)

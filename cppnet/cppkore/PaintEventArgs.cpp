@@ -2,7 +2,7 @@
 #include "PaintEventArgs.h"
 #include "Control.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	PaintEventArgs::PaintEventArgs(Drawing::Graphics* Graphics, Drawing::Rectangle ClipRectangle)
 		: Graphics(Graphics), ClipRectangle(ClipRectangle), _NativeHandle(nullptr), _OldPalette(nullptr), SavedGraphicsState(NULL)

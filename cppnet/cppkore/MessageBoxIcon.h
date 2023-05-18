@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// This enumeration represents the possible message box icons.
 	enum class MessageBoxIcon

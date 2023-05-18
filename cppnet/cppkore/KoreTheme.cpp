@@ -95,7 +95,7 @@ namespace Themes
 		CheckBoxImage = Drawing::ImageFromTgaData(CheckBoxImage_Src, sizeof(CheckBoxImage_Src));
 
 		// Change the message box colors to represent our theme
-		Forms::MessageBox::SetMessageBoxColors(Drawing::Color::White, BackgroundBrush, BackgroundLightBrush);
+		窗体::MessageBox::SetMessageBoxColors(Drawing::Color::White, BackgroundBrush, BackgroundLightBrush);
 	}
 
 	KoreTheme::~KoreTheme()
@@ -103,7 +103,7 @@ namespace Themes
 		delete CheckBoxImage;
 	}
 
-	void KoreTheme::RenderControlBackground(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlBackground(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -111,7 +111,7 @@ namespace Themes
 		EventArgs->Graphics->FillRectangle(&brush, Rect);
 	}
 
-	void KoreTheme::RenderControlButtonBackground(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlButtonBackground(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -136,7 +136,7 @@ namespace Themes
 		EventArgs->Graphics->FillRectangle(DrawBrush.get(), Rect);
 	}
 
-	void KoreTheme::RenderControlText(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State, Drawing::Rectangle LayoutRect, Drawing::ContentAlignment Alignment) const
+	void KoreTheme::RenderControlText(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State, Drawing::Rectangle LayoutRect, Drawing::ContentAlignment Alignment) const
 	{
 		// Calculate formatting flags
 		auto FormatFlags = Drawing::TextFormatFlags::WordBreak;
@@ -161,7 +161,7 @@ namespace Themes
 		Drawing::TextRenderer::DrawText(EventArgs->Graphics, Ctrl->Text(), *Ctrl->GetFont(), LayoutRect, (State == UIX::UIXRenderState::Disabled) ? TextDisabledBrush : TextEnabledBrush, FormatFlags);
 	}
 
-	void KoreTheme::RenderControlGlyph(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlGlyph(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		// Bring client rect to stack
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
@@ -194,7 +194,7 @@ namespace Themes
 		EventArgs->Graphics->FillPath(&FillBrush, &Path);
 	}
 
-	void KoreTheme::RenderControlCheckBoxBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlCheckBoxBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -229,7 +229,7 @@ namespace Themes
 		EventArgs->Graphics->DrawRectangle(&Pen, BoxRect);
 	}
 
-	void KoreTheme::RenderControlCheckBoxCheck(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlCheckBoxCheck(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 		Drawing::Rectangle CheckRect(((Rect.Height - 12) / 2) + 1, (Rect.Height - 12) / 2, 12, 12);
@@ -239,7 +239,7 @@ namespace Themes
 			EventArgs->Graphics->DrawImage(CheckBoxImage, CheckRect);
 	}
 
-	void KoreTheme::RenderControlRadioBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlRadioBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -260,7 +260,7 @@ namespace Themes
 		EventArgs->Graphics->SetSmoothingMode(SmMode);
 	}
 
-	void KoreTheme::RenderControlRadioCheck(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlRadioCheck(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 		Drawing::Rectangle FillRect(1, 1, Rect.Height - 3, Rect.Height - 3);
@@ -296,7 +296,7 @@ namespace Themes
 		EventArgs->Graphics->SetSmoothingMode(SmMode);
 	}
 
-	void KoreTheme::RenderControlGroupBox(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlGroupBox(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -338,7 +338,7 @@ namespace Themes
 		EventArgs->Graphics->DrawLines(&pen, &Lines[0], _countof(Lines));
 	}
 
-	void KoreTheme::RenderControlBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State) const
+	void KoreTheme::RenderControlBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State) const
 	{
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
 
@@ -346,7 +346,7 @@ namespace Themes
 		// Override for textbox rendering due to a bug in the layout rect
 		//
 
-		if (Ctrl->GetType() == Forms::ControlTypes::TextBox)
+		if (Ctrl->GetType() == 窗体::ControlTypes::TextBox)
 		{
 			Rect.Width = Ctrl->Size().Width;
 			Rect.Height = Ctrl->Size().Height;
@@ -359,7 +359,7 @@ namespace Themes
 		Drawing::Pen Pen(&Brush);
 
 		// Check again for textbox due to size issues
-		if (Ctrl->GetType() == Forms::ControlTypes::TextBox)
+		if (Ctrl->GetType() == 窗体::ControlTypes::TextBox)
 		{
 			auto brush = Drawing::SolidBrush(BackgroundBrush);
 			auto pen = Drawing::Pen(&brush);
@@ -376,7 +376,7 @@ namespace Themes
 		EventArgs->Graphics->SetSmoothingMode(SmMode);
 	}
 
-	void KoreTheme::RenderControlListColumnHeader(const std::unique_ptr<Forms::DrawListViewColumnHeaderEventArgs>& EventArgs, Forms::Control* Ctrl) const
+	void KoreTheme::RenderControlListColumnHeader(const std::unique_ptr<窗体::DrawListViewColumnHeaderEventArgs>& EventArgs, 窗体::Control* Ctrl) const
 	{
 		// Fetch color from foreground
 		Drawing::SolidBrush BackBrush(HeaderBrush);
@@ -401,7 +401,7 @@ namespace Themes
 		Drawing::TextRenderer::DrawText(EventArgs->Graphics, EventArgs->Header->Text(), *Ctrl->GetFont(), NewBounds,  Drawing::Color::White, Drawing::TextFormatFlags::Left | Drawing::TextFormatFlags::VerticalCenter | Drawing::TextFormatFlags::SingleLine | Drawing::TextFormatFlags::EndEllipsis);
 	}
 
-	void KoreTheme::RenderControlProgressFill(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIX::UIXRenderState State, uint32_t Progress) const
+	void KoreTheme::RenderControlProgressFill(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIX::UIXRenderState State, uint32_t Progress) const
 	{
 		// Bring client rect to stack
 		Drawing::Rectangle Rect(Ctrl->ClientRectangle());
@@ -441,12 +441,12 @@ namespace Themes
 		EventArgs->Render();
 	}
 
-	void KoreTheme::RenderControlListItem(const std::unique_ptr<Forms::DrawListViewItemEventArgs>& EventArgs, Forms::Control* Ctrl, Drawing::Rectangle SubItemBounds) const
+	void KoreTheme::RenderControlListItem(const std::unique_ptr<窗体::DrawListViewItemEventArgs>& EventArgs, 窗体::Control* Ctrl, Drawing::Rectangle SubItemBounds) const
 	{
 		// This isn't used for modern rendering.
 	}
 
-	void KoreTheme::RenderControlListSubItem(const std::unique_ptr<Forms::DrawListViewSubItemEventArgs>& EventArgs, Forms::Control* Ctrl) const
+	void KoreTheme::RenderControlListSubItem(const std::unique_ptr<窗体::DrawListViewSubItemEventArgs>& EventArgs, 窗体::Control* Ctrl) const
 	{
 		// Use stock bounds, subitems are valid
 		Drawing::Rectangle SubItemBounds(EventArgs->Bounds);
@@ -469,7 +469,7 @@ namespace Themes
 		Drawing::TextRenderer::DrawText(EventArgs->Graphics, EventArgs->Text, *Ctrl->GetFont(), TextLayoutRect, (State == LVIS_SELECTED) ? Drawing::Color::White : EventArgs->Style.ForeColor, Drawing::TextFormatFlags::Left | Drawing::TextFormatFlags::VerticalCenter | Drawing::TextFormatFlags::SingleLine | Drawing::TextFormatFlags::EndEllipsis);
 	}
 
-	void KoreTheme::RenderControlToolTip(const std::unique_ptr<Forms::DrawToolTipEventArgs>& EventArgs, Forms::Control* Ctrl) const
+	void KoreTheme::RenderControlToolTip(const std::unique_ptr<窗体::DrawToolTipEventArgs>& EventArgs, 窗体::Control* Ctrl) const
 	{
 		Drawing::SolidBrush Brush(BackgroundLightBrush);
 

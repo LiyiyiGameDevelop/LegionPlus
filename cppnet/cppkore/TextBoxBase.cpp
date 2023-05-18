@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "TextBoxBase.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	TextBoxBase::TextBoxBase()
 		: Control(), _Flags((TextBoxFlags)0), _BorderStyle(BorderStyle::Fixed3D), _MaxLength(32767), _SelectionStart(0), _SelectionLength(0), _DoubleClickFired(false)

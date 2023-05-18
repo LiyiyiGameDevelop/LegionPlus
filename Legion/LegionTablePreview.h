@@ -5,7 +5,7 @@
 #include <UIXListView.h>
 #include <UIXButton.h>
 
-class LegionTablePreview : public Forms::Form
+class LegionTablePreview : public 窗体::Form
 {
 public:
 	LegionTablePreview();
@@ -50,9 +50,9 @@ private:
 
 	// Internal routine to setup the component
 	void InitializeComponent();
-	static void GetVirtualItem(const std::unique_ptr<Forms::RetrieveVirtualItemEventArgs>& EventArgs, Forms::Control* Sender);
-	static void ToggleShowVectorColors(Forms::Control* Sender);
-	static void OnResized(Forms::Control* Sender);
+	static void GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemEventArgs>& EventArgs, 窗体::Control* Sender);
+	static void ToggleShowVectorColors(窗体::Control* Sender);
+	static void OnResized(窗体::Control* Sender);
 
 };
 

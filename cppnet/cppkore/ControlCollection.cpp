@@ -2,7 +2,7 @@
 #include "ControlCollection.h"
 #include "Control.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ControlCollection::~ControlCollection()
 	{

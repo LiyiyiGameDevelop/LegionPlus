@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "PaintEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Provides data for the OnPaintFrame event.
 	class PaintFrameEventArgs : public PaintEventArgs

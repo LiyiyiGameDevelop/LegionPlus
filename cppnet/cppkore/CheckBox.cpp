@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CheckBox.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	CheckBox::CheckBox()
 		: ButtonBase(), _AutoCheck(true), _ThreeState(false), _Appearence(Appearence::Normal), _CheckState(CheckState::Unchecked)

@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <type_traits>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies control functionality.
 	enum class ControlStyles

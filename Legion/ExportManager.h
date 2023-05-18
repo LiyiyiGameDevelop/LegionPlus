@@ -8,8 +8,8 @@
 #include "RpakLib.h"
 #include "MdlLib.h"
 
-typedef void (ExportProgressCallback)(uint32_t Progress, Forms::Form* MainForm, bool Finished);
-typedef bool (CheckStatusCallback)(int32_t AssetIndex, Forms::Form* MainForm);
+typedef void (ExportProgressCallback)(uint32_t Progress, 窗体::Form* MainForm, bool Finished);
+typedef bool (CheckStatusCallback)(int32_t AssetIndex, 窗体::Form* MainForm);
 
 // Handles exporting assets from the various filesystems...
 class ExportManager
@@ -32,9 +32,9 @@ public:
 	static string GetMapExportPath();
 
 	// Handles exporting miles sound assets in parallel
-	static void ExportMilesAssets(const std::unique_ptr<MilesLib>& MilesFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, Forms::Form* MainForm);
+	static void ExportMilesAssets(const std::unique_ptr<MilesLib>& MilesFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, 窗体::Form* MainForm);
 	// Handles exporting rpak assets in parallel
-	static void ExportRpakAssets(const std::unique_ptr<RpakLib>& RpakFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, Forms::Form* MainForm);
+	static void ExportRpakAssets(const std::unique_ptr<RpakLib>& RpakFileSystem, List<ExportAsset> ExportAssets, ExportProgressCallback ProgressCallback, CheckStatusCallback StatusCallback, 窗体::Form* MainForm);
 	// Handles exporting vpk assets in parallel
 	static void ExportMdlAssets(const std::unique_ptr<MdlLib>& MdlFS, List<string>& ExportAssets);
 	// Write a list of loaded assets to disk

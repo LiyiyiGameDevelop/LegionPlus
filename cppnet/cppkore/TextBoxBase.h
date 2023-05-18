@@ -10,7 +10,7 @@
 #include "TextBoxFlags.h"
 #include "ContentAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Implements the basic functionality required by text controls.
 	class TextBoxBase : public Control

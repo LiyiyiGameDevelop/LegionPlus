@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Label.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	Label::Label()
 		: Control(), _OwnerDraw(false), _FlatStyle(FlatStyle::Standard), _TextAlign(Drawing::ContentAlignment::TopLeft), _BorderStyle(BorderStyle::None)

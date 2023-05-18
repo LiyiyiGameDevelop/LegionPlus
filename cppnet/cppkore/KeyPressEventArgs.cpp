@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "KeyPressEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	KeyPressEventArgs::KeyPressEventArgs(char KeyChar)
 		: KeyChar(KeyChar), _Handled(false)

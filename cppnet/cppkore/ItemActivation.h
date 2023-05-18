@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies how the user activates items and the appearance
 	// of items as the mouse cursor moves over them.

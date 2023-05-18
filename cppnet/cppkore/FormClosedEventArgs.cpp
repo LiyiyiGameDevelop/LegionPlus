@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "FormClosedEventArgs.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	FormClosedEventArgs::FormClosedEventArgs(CloseReason Reason)
 		: Reason(Reason)

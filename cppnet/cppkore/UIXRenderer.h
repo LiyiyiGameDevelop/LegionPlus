@@ -46,32 +46,32 @@ namespace UIX
 		// These must be implemented by default
 		//
 
-		virtual void RenderControlBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlBackground(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlButtonBackground(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlText(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State, Drawing::Rectangle LayoutRect, Drawing::ContentAlignment Alignment) const = 0;
-		virtual void RenderControlProgressFill(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State, uint32_t Progress) const = 0;
-		virtual void RenderControlGlyph(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlCheckBoxBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlCheckBoxCheck(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlRadioBorder(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlRadioCheck(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
-		virtual void RenderControlGroupBox(const std::unique_ptr<Forms::PaintEventArgs>& EventArgs, Forms::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlBackground(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlButtonBackground(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlText(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State, Drawing::Rectangle LayoutRect, Drawing::ContentAlignment Alignment) const = 0;
+		virtual void RenderControlProgressFill(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State, uint32_t Progress) const = 0;
+		virtual void RenderControlGlyph(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlCheckBoxBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlCheckBoxCheck(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlRadioBorder(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlRadioCheck(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
+		virtual void RenderControlGroupBox(const std::unique_ptr<窗体::PaintEventArgs>& EventArgs, 窗体::Control* Ctrl, UIXRenderState State) const = 0;
 
 		//
 		// These are for ListView controls
 		//
 
 		virtual void RenderControlListHeader(const std::unique_ptr<Drawing::BufferedGraphics>& EventArgs) const = 0;
-		virtual void RenderControlListColumnHeader(const std::unique_ptr<Forms::DrawListViewColumnHeaderEventArgs>& EventArgs, Forms::Control* Ctrl) const = 0;
-		virtual void RenderControlListItem(const std::unique_ptr<Forms::DrawListViewItemEventArgs>& EventArgs, Forms::Control* Ctrl, Drawing::Rectangle SubItemBounds) const = 0;
-		virtual void RenderControlListSubItem(const std::unique_ptr<Forms::DrawListViewSubItemEventArgs>& EventArgs, Forms::Control* Ctrl) const = 0;
+		virtual void RenderControlListColumnHeader(const std::unique_ptr<窗体::DrawListViewColumnHeaderEventArgs>& EventArgs, 窗体::Control* Ctrl) const = 0;
+		virtual void RenderControlListItem(const std::unique_ptr<窗体::DrawListViewItemEventArgs>& EventArgs, 窗体::Control* Ctrl, Drawing::Rectangle SubItemBounds) const = 0;
+		virtual void RenderControlListSubItem(const std::unique_ptr<窗体::DrawListViewSubItemEventArgs>& EventArgs, 窗体::Control* Ctrl) const = 0;
 
 		//
 		// Tooltip renderer
 		//
 
-		virtual void RenderControlToolTip(const std::unique_ptr<Forms::DrawToolTipEventArgs>& EventArgs, Forms::Control* Ctrl) const = 0;
+		virtual void RenderControlToolTip(const std::unique_ptr<窗体::DrawToolTipEventArgs>& EventArgs, 窗体::Control* Ctrl) const = 0;
 
 		//
 		// These handle external colors

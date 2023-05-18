@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// This Enumeration represents the styles the ProgressBar can take.
 	enum class ProgressBarStyle

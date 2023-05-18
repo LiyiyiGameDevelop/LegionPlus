@@ -5,7 +5,7 @@
 #include "UIXLabel.h"
 #include "UIXProgressBar.h"
 
-class LegionProgress : public Forms::Form
+class LegionProgress : public ´°Ìו::Form
 {
 public:
 	LegionProgress();
@@ -23,8 +23,8 @@ private:
 	void InitializeComponent();
 
 	// Internal event on finish click
-	static void OnFinishClick(Forms::Control* Sender);
-	static void OnCancelClick(Forms::Control* Sender);
+	static void OnFinishClick(´°Ìו::Control* Sender);
+	static void OnCancelClick(´°Ìו::Control* Sender);
 
 	// Cancels the progress
 	void CancelProgress();

@@ -2,7 +2,7 @@
 #include "Button.h"
 #include "Form.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	Button::Button()
 		: ButtonBase(), _DialogResult(DialogResult::None)
@@ -43,7 +43,7 @@ namespace Forms
 		auto Form = this->FindForm();
 
 		if (Form != nullptr)
-			((Forms::Form*)Form)->SetDialogResult(this->_DialogResult);
+			((´°Ìו::Form*)Form)->SetDialogResult(this->_DialogResult);
 
 		// Call base event last
 		ButtonBase::OnClick();

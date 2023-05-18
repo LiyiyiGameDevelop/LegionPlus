@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Specifies which scroll bars will be visible on a control.
 	enum class ScrollBars

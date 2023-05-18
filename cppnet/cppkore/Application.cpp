@@ -5,7 +5,7 @@
 #pragma comment(lib, "Gdiplus.lib")
 #pragma comment(lib, "Comctl32.lib")
 
-namespace Forms
+namespace ´°Ìו
 {
 	// We haven't initialized it yet...
 	std::atomic<bool> Application::IsGdipInitialized = false;

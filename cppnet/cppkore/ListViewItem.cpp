@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ListViewItem.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	ListViewItem::ListViewItem()
 		: _SubItems(nullptr), _SubItemStyles(nullptr), Index(-1), _SubItemCount(0)

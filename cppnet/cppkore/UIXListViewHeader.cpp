@@ -6,13 +6,13 @@
 
 namespace UIX
 {
-	UIXListViewHeader::UIXListViewHeader(HWND Handle, Forms::ListView* Parent)
+	UIXListViewHeader::UIXListViewHeader(HWND Handle, 窗体::ListView* Parent)
 		: _Handle(Handle), _Parent(Parent)
 	{
 		SetWindowSubclass(Handle, &UIXListViewHeader::InternalWndProc, NULL, (DWORD_PTR)this);
 	}
 
-	void UIXListViewHeader::WndProc(Forms::Message& Msg)
+	void UIXListViewHeader::WndProc(窗体::Message& Msg)
 	{
 		// Used to allow for custom theming of the background of this control
 		switch (Msg.Msg)
@@ -52,7 +52,7 @@ namespace UIX
 		}
 	}
 
-	void UIXListViewHeader::DefWndProc(Forms::Message& Msg)
+	void UIXListViewHeader::DefWndProc(窗体::Message& Msg)
 	{
 		// Proxy to subclassed func
 		Msg.Result = DefSubclassProc((HWND)Msg.HWnd, Msg.Msg, Msg.WParam, Msg.LParam);
@@ -61,7 +61,7 @@ namespace UIX
 	LRESULT UIXListViewHeader::InternalWndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData)
 	{
 		// Fetch the class data
-		auto ControlMessage = Forms::Message(hWnd, Msg, wParam, lParam);
+		auto ControlMessage = 窗体::Message(hWnd, Msg, wParam, lParam);
 		((UIXListViewHeader*)dwRefData)->WndProc(ControlMessage);
 
 		// Return result

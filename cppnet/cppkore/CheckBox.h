@@ -7,7 +7,7 @@
 #include "CheckState.h"
 #include "ContentAlignment.h"
 
-namespace Forms
+namespace ´°Ìו
 {
 	// Represents a Windows check box.
 	class CheckBox : public ButtonBase
