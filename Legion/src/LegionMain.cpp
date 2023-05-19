@@ -792,7 +792,7 @@ void LegionMain::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemE
 
 	uint32_t RemappedDisplayIndex = ThisPtr->DisplayIndices[EventArgs->ItemIndex];
 
-	static const char* AssetTypes[] = { "模型", "动画集","动画序列", "图像", "材质", "DataTable", "声音", "Subtitles", "ShaderSet", "UI Image", "UI Image Atlas", "设置","Settings Layout", "RSON", "RUI" , "Map", "Effect" };
+	static const char* AssetTypes[] = { "模型", "动画集","动画序列", "图像", "材质", "数据表", "声音", "字幕", "着色器设置", "UI 图像", "UI 图像图集", "设置","设置布局", "RSON", "RUI" , "地图", "效果" };
 	static const Drawing::Color AssetTypesColors[] = 
 	{
 		Drawing::Color(0, 157, 220),  // 模型
@@ -800,18 +800,18 @@ void LegionMain::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemE
 		Drawing::Color(220, 75, 109), // 动画序列
 		Drawing::Color(202, 97, 195), // 图像
 		Drawing::Color(27, 153, 139), // 材质
-		Drawing::Color(211, 7, 247),  // DataTable
+		Drawing::Color(211, 7, 247),  // 数据表
 		Drawing::Color(216, 30, 91),  // 声音,
-		Drawing::Color(239, 130, 13), // Subtitles
-		Drawing::Color(255, 246, 138),// ShaderSet
-		Drawing::Color(114, 142, 230),// UI Image
-		Drawing::Color(114, 142, 230),// UI Image Atlas
+		Drawing::Color(239, 130, 13), // 字幕
+		Drawing::Color(255, 246, 138),// 着色器设置
+		Drawing::Color(114, 142, 230),// UI 图像
+		Drawing::Color(114, 142, 230),// UI 图像图集
 		Drawing::Color(255, 196, 0),  // 设置
-		Drawing::Color(255, 127,0),  // SettingsLayout
+		Drawing::Color(255, 127,0),  // 设置布局
 		Drawing::Color(54, 249, 249), // RSON
 		Drawing::Color(4, 197, 4),    // RUI
-		Drawing::Color(131 ,69, 255), // Map
-		Drawing::Color(17, 221, 191), // Effect
+		Drawing::Color(131 ,69, 255), // 地图
+		Drawing::Color(17, 221, 191), // 效果
 	};
 
 	static const char* AssetStatus[] = { "加载", "导出ing", "导出ed", "错误" };
