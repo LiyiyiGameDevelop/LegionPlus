@@ -814,7 +814,7 @@ void LegionMain::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemE
 		Drawing::Color(17, 221, 191), // 效果
 	};
 
-	static const char* AssetStatus[] = { "加载", "导出ing", "导出ed", "错误" };
+	static const char* AssetStatus[] = { "加载", "导出中", "已导出", "错误" };
 	static const Drawing::Color AssetStatusColors[] = 
 	{
 		Drawing::Color(35,  206, 107),
