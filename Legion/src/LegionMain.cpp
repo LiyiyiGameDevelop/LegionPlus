@@ -254,8 +254,8 @@ void LegionMain::LoadApexFile(const List<string>& File)
 			}
 			catch (const std::exception& e)
 			{
-				窗体::MessageBox::Show("An error occurred while loading the MBNK:\n\n" + string(e.what()), "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
-				Main->StatusLabel->SetText("Idle");
+				窗体::MessageBox::Show("加载 MBNK 时出错：\n\n" + string(e.what()), "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
+				Main->StatusLabel->SetText("空闲");
 			}
 		}
 
@@ -274,7 +274,7 @@ void LegionMain::ExportSelectedAssets()
 
 	if (SelectedIndices.Count() == 0)
 	{
-		窗体::MessageBox::Show("Please select at least one asset to export.", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
+		窗体::MessageBox::Show("请至少选择一个要导出的资产。", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
 		return;
 	}
 
