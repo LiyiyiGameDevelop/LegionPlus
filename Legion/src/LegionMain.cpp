@@ -622,7 +622,7 @@ void LegionMain::OnLoadClick(窗体::Control* Sender)
 
 	else if (OpenFileD.Count() > MAX_LOADED_FILES)
 	{
-		string msg = string::Format("Please select %i or fewer files.", MAX_LOADED_FILES);
+		string msg = string::Format("请选择 %i 或更少的文件。", MAX_LOADED_FILES);
 		MessageBox::Show(msg, "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 		return;
 	}
@@ -680,7 +680,7 @@ void LegionMain::OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventAr
 	List<uint32_t> SelectedIndices = AssetsListView->SelectedIndices();
 	string endString = "";
 
-	g_Logger.Info("selected asset names:\n");
+	g_Logger.Info("选定的资产名称：\n");
 	for (uint32_t i = 0; i < SelectedIndices.Count(); i++)
 	{
 		uint32_t& DisplayIndex = ThisPtr->DisplayIndices[SelectedIndices[i]];
@@ -696,7 +696,7 @@ void LegionMain::OnListRightClick(const std::unique_ptr<MouseEventArgs>& EventAr
 
 	clip::set_text(endString.ToCString());
 
-	g_Logger.Info("copying %i asset name%s to clipboard\n", SelectedIndices.Count(), SelectedIndices.Count() == 1 ? "" : "s");
+	g_Logger.Info("将 %i 资产的名称 %s 复制到剪贴板\n", SelectedIndices.Count(), SelectedIndices.Count() == 1 ? "" : "s");
 }
 
 void LegionMain::OnListDoubleClick(窗体::Control* Sender)
