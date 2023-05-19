@@ -191,7 +191,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 					Main->RpakFileSystem->InitializeModelExporter((ModelExportFormat_t)ExportManager::Config.Get<System::SettingType::Integer>("ModelFormat"));
 				}
 				
-				// force short paths when exporting bsp
+				// 导出 BSP 时强制短路径
 				bool useFullPaths = ExportManager::Config.GetBool("UseFullPaths");
 				ExportManager::Config.SetBool("UseFullPaths", false);
 
@@ -572,8 +572,8 @@ void LegionMain::RefreshView()
 		this->ResetDisplayIndices();
 	}
 	
-	// restore the search box's text after refreshing
-	// yes this makes the window flash when refreshing as it performs the search
+	// 刷新后恢复搜索框的文本
+	// 是的，这会使窗口在执行搜索时刷新时闪烁
 	if (SearchText.Length() > 0)
 	{
 		this->SearchBox->SetText(SearchText);
