@@ -610,11 +610,11 @@ void LegionMain::OnLoadClick(窗体::Control* Sender)
 {
 	LegionMain* ThisPtr = (LegionMain*)Sender->FindForm();
 
-	List<string> OpenFileD = OpenFileDialog::ShowMultiFileDialog("Legion+: Select file(s) to load", "", "Apex Legends Files (MBnk, RPak, Bsp)|*.mbnk;*.rpak;*.bsp", Sender->FindForm());
+	List<string> OpenFileD = OpenFileDialog::ShowMultiFileDialog("Legion+：选择要加载的文件", "", "Apex Legends 文件 (MBnk, RPak, Bsp)|*.mbnk;*.rpak;*.bsp", Sender->FindForm());
 
 	for (uint32_t i = 0; i < OpenFileD.Count(); i++)
 	{
-		g_Logger.Info("Load rpak: %s\n", OpenFileD[i].ToCString());
+		g_Logger.Info("加载 rpak： %s\n", OpenFileD[i].ToCString());
 	}
 
 	if (OpenFileD.Count() == 0)
