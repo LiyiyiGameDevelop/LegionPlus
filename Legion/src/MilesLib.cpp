@@ -738,7 +738,7 @@ std::unique_ptr<List<ApexAsset>> MilesLib::BuildAssetList()
 		NewAsset.Hash = AssetKvp.first;
 		NewAsset.Name = AssetKvp.second.Name;
 		NewAsset.Type = ApexAssetType::Sound;
-		String Language = AssetKvp.second.LocalizeIndex == -1 ? String("None") : LanguageName((MilesLanguageID)AssetKvp.second.LocalizeIndex);
+		String Language = AssetKvp.second.LocalizeIndex == -1 ? String("无") : LanguageName((MilesLanguageID)AssetKvp.second.LocalizeIndex);
 		NewAsset.Info = string::Format("语言： %s, 采样率： %d, 通道： %d", Language.ToCString(), AssetKvp.second.SampleRate, AssetKvp.second.ChannelCount);
 		NewAsset.Version = this->MbnkVersion;
 
