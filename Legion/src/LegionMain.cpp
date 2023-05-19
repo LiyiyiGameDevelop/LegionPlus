@@ -404,7 +404,7 @@ void LegionMain::SearchForAssets()
 	this->AssetsListView->SetVirtualListSize(this->DisplayIndices.Count());
 	this->AssetsListView->Refresh();
 
-	this->StatusLabel->SetText(string::Format("Found %d assets", this->DisplayIndices.Count()));
+	this->StatusLabel->SetText(string::Format("找到 %d 个资产", this->DisplayIndices.Count()));
 	this->ClearSearchButton->SetVisible(true);
 }
 
@@ -601,9 +601,9 @@ void LegionMain::ResetDisplayIndices()
 	List<string> PathParts = LoadPath[0].Split("\\");
 
 	if (this->LoadPath.Count() == 1)
-		this->StatusLabel->SetText(string::Format("%s Loaded %d assets", (PathParts[PathParts.Count()-1] + ": ").ToCString(), this->DisplayIndices.Count()));
+		this->StatusLabel->SetText(string::Format("%s 已加载的 %d 资产", (PathParts[PathParts.Count()-1] + ": ").ToCString(), this->DisplayIndices.Count()));
 	else
-		this->StatusLabel->SetText(string::Format("Loaded %d assets", this->DisplayIndices.Count()));
+		this->StatusLabel->SetText(string::Format("加载 %d 个资产", this->DisplayIndices.Count()));
 }
 
 void LegionMain::OnLoadClick(窗体::Control* Sender)
