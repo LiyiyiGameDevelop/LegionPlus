@@ -722,7 +722,7 @@ bool MilesLib::ExtractAsset(const MilesAudioAsset& Asset, const string& FilePath
 	Writer->Seek(0, IO::SeekOrigin::Begin);
 
 	Writer->Write((uint8_t*)&hdr, 0, sizeof(WAVEHEADER));
-	g_Logger.Info("Successfully exported %s\n", FilePath.ToCString());
+	g_Logger.Info("已成功导出 %s\n", FilePath.ToCString());
 	return true;
 }
 
@@ -739,7 +739,7 @@ std::unique_ptr<List<ApexAsset>> MilesLib::BuildAssetList()
 		NewAsset.Name = AssetKvp.second.Name;
 		NewAsset.Type = ApexAssetType::Sound;
 		String Language = AssetKvp.second.LocalizeIndex == -1 ? String("None") : LanguageName((MilesLanguageID)AssetKvp.second.LocalizeIndex);
-		NewAsset.Info = string::Format("Language: %s, Sample Rate: %d, Channels: %d", Language.ToCString(), AssetKvp.second.SampleRate, AssetKvp.second.ChannelCount);
+		NewAsset.Info = string::Format("语言： %s, 采样率： %d, 通道： %d", Language.ToCString(), AssetKvp.second.SampleRate, AssetKvp.second.ChannelCount);
 		NewAsset.Version = this->MbnkVersion;
 
 		Result->EmplaceBack(std::move(NewAsset));
