@@ -413,12 +413,12 @@ void MilesLib::MountBank(const string& Path)
 		catch (...) { continue; }
 
 		if (StreamHeader.Magic != 0x43535452) {
-			g_Logger.Warning("File %s has .mstr extension but wrong magic number\n", Path.ToCString());
+			g_Logger.Warning("文件 %s 具有 .mstr 扩展名，但错位\n", Path.ToCString());
 			continue;
 		}
 		if (StreamHeader.LocalizeIndex != MilesLanguageID::None && StreamHeader.LocalizeIndex != SelectedLanguage) continue;
 
-		g_Logger.Info("Loaded %s (patch %d) audio bank: %s\n", LanguageName(StreamHeader.LocalizeIndex).ToCString(), StreamHeader.PatchIndex, Path.ToCString());
+		g_Logger.Info("已加载 %s (补丁 %d) 音频库: %s\n", LanguageName(StreamHeader.LocalizeIndex).ToCString(), StreamHeader.PatchIndex, Path.ToCString());
 
 		uint32_t KeyIndex = ((uint32_t)StreamHeader.LocalizeIndex << 16) + StreamHeader.PatchIndex;
 
