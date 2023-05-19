@@ -111,7 +111,7 @@ void LegionMain::InitializeComponent()
 	this->SettingsButton->SetSize({ 80, 27 });
 	this->SettingsButton->SetLocation({ 752, 446});
 	this->SettingsButton->SetTabIndex(1);
-	this->SettingsButton->SetText("Settings");
+	this->SettingsButton->SetText("设置");
 	this->SettingsButton->Click += &OnSettingsClick;
 	this->SettingsButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->AddControl(this->SettingsButton);
@@ -122,10 +122,10 @@ void LegionMain::InitializeComponent()
 	this->AssetsListView->SetTabIndex(0);
 	this->AssetsListView->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Left | 窗体::AnchorStyles::Right);
 	this->AssetsListView->SetView(窗体::View::Details);
-	this->AssetsListView->Columns.Add({ "Name", 250 });
-	this->AssetsListView->Columns.Add({ "Type", 100 });
+	this->AssetsListView->Columns.Add({ "名称", 250 });
+	this->AssetsListView->Columns.Add({ "类型", 100 });
 	this->AssetsListView->Columns.Add({ "状态", 100 });
-	this->AssetsListView->Columns.Add({ "Info", 220 });
+	this->AssetsListView->Columns.Add({ "信息", 220 });
 	this->AssetsListView->Columns.Add({ "调试信息", 130 });
 	this->AssetsListView->SetVirtualMode(true);
 	this->AssetsListView->SetFullRowSelect(true);
@@ -792,21 +792,21 @@ void LegionMain::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemE
 
 	uint32_t RemappedDisplayIndex = ThisPtr->DisplayIndices[EventArgs->ItemIndex];
 
-	static const char* AssetTypes[] = { "Model", "AnimationSet","AnimationSeq", "Image", "Material", "DataTable", "Sound", "Subtitles", "ShaderSet", "UI Image", "UI Image Atlas", "Settings","Settings Layout", "RSON", "RUI" , "Map", "Effect" };
+	static const char* AssetTypes[] = { "模型", "动画集","动画序列", "图像", "材质", "DataTable", "声音", "Subtitles", "ShaderSet", "UI Image", "UI Image Atlas", "设置","Settings Layout", "RSON", "RUI" , "Map", "Effect" };
 	static const Drawing::Color AssetTypesColors[] = 
 	{
-		Drawing::Color(0, 157, 220),  // Model
-		Drawing::Color(219, 80, 74),  // AnimationSet
-		Drawing::Color(220, 75, 109), // Animation Seq
-		Drawing::Color(202, 97, 195), // Image
-		Drawing::Color(27, 153, 139), // Material
+		Drawing::Color(0, 157, 220),  // 模型
+		Drawing::Color(219, 80, 74),  // 动画集
+		Drawing::Color(220, 75, 109), // 动画序列
+		Drawing::Color(202, 97, 195), // 图像
+		Drawing::Color(27, 153, 139), // 材质
 		Drawing::Color(211, 7, 247),  // DataTable
-		Drawing::Color(216, 30, 91),  // Sound,
+		Drawing::Color(216, 30, 91),  // 声音,
 		Drawing::Color(239, 130, 13), // Subtitles
 		Drawing::Color(255, 246, 138),// ShaderSet
 		Drawing::Color(114, 142, 230),// UI Image
 		Drawing::Color(114, 142, 230),// UI Image Atlas
-		Drawing::Color(255, 196, 0),  // Settings
+		Drawing::Color(255, 196, 0),  // 设置
 		Drawing::Color(255, 127,0),  // SettingsLayout
 		Drawing::Color(54, 249, 249), // RSON
 		Drawing::Color(4, 197, 4),    // RUI
@@ -814,7 +814,7 @@ void LegionMain::GetVirtualItem(const std::unique_ptr<窗体::RetrieveVirtualItemE
 		Drawing::Color(17, 221, 191), // Effect
 	};
 
-	static const char* AssetStatus[] = { "Loaded", "Exporting", "Exported", "Error" };
+	static const char* AssetStatus[] = { "加载", "导出ing", "导出ed", "错误" };
 	static const Drawing::Color AssetStatusColors[] = 
 	{
 		Drawing::Color(35,  206, 107),
