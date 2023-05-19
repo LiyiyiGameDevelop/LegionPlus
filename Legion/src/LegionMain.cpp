@@ -209,7 +209,7 @@ void LegionMain::LoadApexFile(const List<string>& File)
 
 				if ((ImageExportFormat_t)ExportManager::Config.Get<System::SettingType::Integer>("ImageFormat") != ImageExportFormat_t::Png)
 				{
-					auto msgAnswer = MessageBox::Show("You are about to export a bsp file with a different image format selected than 'PNG'. Continue?", "Legion+", 窗体::MessageBoxButtons::YesNo, 窗体::MessageBoxIcon::Question);
+					auto msgAnswer = MessageBox::Show("您将要导出一个 bsp 文件，其中包含与“PNG”不同的图像格式。是否继续？", "Legion+", 窗体::MessageBoxButtons::YesNo, 窗体::MessageBoxIcon::Question);
 					if (msgAnswer == DialogResult::No)
 					{
 						Main->StatusLabel->SetText("Idle");
@@ -227,13 +227,13 @@ void LegionMain::LoadApexFile(const List<string>& File)
 
 				Main->Invoke([]()
 				{
-					窗体::MessageBox::Show("Successfully exported the bsp map file.", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
+					窗体::MessageBox::Show("已成功导出 bsp 映射文件。", "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Information);
 				});
 				Main->StatusLabel->SetText("Idle");
 			}
 			catch (const std::exception& e)
 			{
-				窗体::MessageBox::Show("An error occurred while exporting the bsp file:\n\n" + string(e.what()), "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
+				窗体::MessageBox::Show("导出 bsp 文件时出错：\n\n" + string(e.what()), "Legion+", 窗体::MessageBoxButtons::OK, 窗体::MessageBoxIcon::Warning);
 			}
 
 			Main->RefreshView();
