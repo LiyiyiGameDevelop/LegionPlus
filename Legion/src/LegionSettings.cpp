@@ -20,7 +20,7 @@ void LegionSettings::InitializeComponent()
 	this->SuspendLayout();
 	this->SetAutoScaleDimensions({ 6, 13 });
 	this->SetAutoScaleMode(窗体::AutoScaleMode::Font);
-	this->SetText("Legion+ | Application Settings");
+	this->SetText("Legion+ | 应用程序设置");
 	this->SetClientSize({ WindowX, WindowY });
 	this->SetFormBorderStyle(窗体::FormBorderStyle::FixedSingle);
 	this->SetStartPosition(窗体::FormStartPosition::CenterParent);
@@ -34,7 +34,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox1->SetSize({ 458, 65 });
 	this->groupBox1->SetLocation({ 12, 10 });
 	this->groupBox1->SetTabIndex(3);
-	this->groupBox1->SetText("General Directory Settings");
+	this->groupBox1->SetText("常规目录设置");
 	this->groupBox1->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->AddControl(this->groupBox1);
 
@@ -46,7 +46,7 @@ void LegionSettings::InitializeComponent()
 	this->ExportBrowseFolder->SetLocation({ 15, 25 });
 	this->ExportBrowseFolder->SetTabIndex(5);
 	this->ExportBrowseFolder->SetReadOnly(true);
-	this->ExportBrowseFolder->SetText("Click on \"Browse\" to set a custom export directory");
+	this->ExportBrowseFolder->SetText("单击 \"浏览\" 以设置自定义导出目录");
 	this->ExportBrowseFolder->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->groupBox1->AddControl(this->ExportBrowseFolder);
 
@@ -54,7 +54,7 @@ void LegionSettings::InitializeComponent()
 	this->ExportBrowseButton->SetSize({ 80, 25 });
 	this->ExportBrowseButton->SetLocation({ 365, 25 });
 	this->ExportBrowseButton->SetTabIndex(5);
-	this->ExportBrowseButton->SetText("Browse");
+	this->ExportBrowseButton->SetText("浏览");
 	this->ExportBrowseButton->SetAnchor(窗体::AnchorStyles::Bottom | 窗体::AnchorStyles::Right);
 	this->groupBox1->AddControl(this->ExportBrowseButton);
 
@@ -65,7 +65,7 @@ void LegionSettings::InitializeComponent()
 	this->groupBox2->SetSize({ 458, 68 });
 	this->groupBox2->SetLocation({ 12, 80 });
 	this->groupBox2->SetTabIndex(3);
-	this->groupBox2->SetText("Toggle Settings");
+	this->groupBox2->SetText("切换设置");
 	this->groupBox2->SetAnchor(窗体::AnchorStyles::Top | 窗体::AnchorStyles::Left);
 	this->AddControl(this->groupBox2);
 
