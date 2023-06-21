@@ -105,6 +105,13 @@ namespace Diagnostics
 		static Process GetCurrentProcess();
 
 		// Creates a new process with the given information
+				// 将现有文件复制到新文件，如果指定，则覆盖
+		/**  这里写这个函数是干什么用的
+ @param[in]    输入参数1
+ @param[in]    输入参数2
+ @param[out]  输出参数1
+ @return          返回值解释一下
+*/
 		static Process Start(const string& FileName);
 		// Creates a new process with the given information
 		static Process Start(const string& FileName, const string& Arguments);

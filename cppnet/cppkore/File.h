@@ -19,9 +19,8 @@ namespace IO
 	class File
 	{
 	public:
-		// Copies an existing file to a new file, overwriting if specified
 		static void Copy(const string& SourceFileName, const string& DestinationFileName, bool OverWrite = false);
-		// Deletes a file permanently
+		// сю╬ци╬ЁЩнд╪Ч
 		static void Delete(const string& FilePath);
 		// Decrypts a file from a NTFS volume
 		static void Decrypt(const string& FilePath);
